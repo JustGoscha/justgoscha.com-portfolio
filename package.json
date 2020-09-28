@@ -1,0 +1,22 @@
+{
+  "name": "justgoscha.com-portfolio",
+  "version": "1.0.0",
+  "description": "This is my portfolio site.  Build with eleventy.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "build": "eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustGoscha/justgoscha.com-portfolio.git"
+  },
+  "author": "Goscha Graf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustGoscha/justgoscha.com-portfolio/issues"
+  },
+  "homepage": "https://github.com/JustGoscha/justgoscha.com-portfolio#readme"
+}

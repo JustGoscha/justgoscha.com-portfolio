@@ -1,3 +1,4 @@
 # justgoscha.com-portfolio
 
-Test
+This is my portfolio site. 
+Build with eleventy. 

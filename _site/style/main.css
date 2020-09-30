@@ -1,0 +1,186 @@
+
+body{
+    background: #fff;
+}
+
+.page-sections {
+    display: block;
+    width: 100%
+}
+
+.page-sections .section-container{
+    max-width: var(--main-content-size); 
+    margin: auto;
+    padding: 0 var(--spacing-2x)
+}
+
+/* HEADER */
+
+header {
+    border-bottom: 1px solid var(--seperator-color);
+    padding: var(--spacing)  0 var(--spacing) 0;
+}
+
+header a {
+    display: block;
+    color: var(--hint-text-light);
+    font-weight: 300;
+    
+    transition: 0.3s transform, 0.3s color, 0.3s text-shadow
+}
+
+/* header ul>li:nth-child(1) {
+    transform: translateY(0px)
+}
+header ul>li:nth-child(2) {
+    transform: translateY(100px)
+}
+header ul>li:nth-child(3) {
+    transform: translateY(200px)
+} */
+
+header a:hover {
+    color: var(--primary-text-light);
+}
+
+header .section-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo-section{
+    display: flex;
+    align-items: center;
+    color: var(--primary-text)
+}
+
+#justgoscha-logo {
+    display: flex;
+    align-items: center;
+    margin-right: var(--spacing-2x)
+}
+
+#occupation{
+    font-size: 16px;
+    color: var(--hint-text)
+
+    
+}
+
+header nav ul{ 
+    display: flex;
+    justify-content: space-between;
+
+}
+header nav ul>li {
+    margin: var(--spacing);
+    list-style: none;
+}
+
+.reel{
+    position: relative;
+}
+
+.reel-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    
+    background-color: var(--secondary-100);
+    opacity: .9;
+    cursor: pointer;
+    transition: .3s background-color ease-in-out;
+}
+
+.reel-overlay:hover {
+    background-color: var(--secondary-dark);
+    //opacity: .7;
+}
+
+.reel .play-button {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 50px;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    text-indent: 8px;
+    background-color: var(--primary-400);
+    border-radius: 50%;
+    transition: .4s background-color ease-in-out,
+        .2s transform ease-out;
+        //cubic-bezier(0.075, 0.82, 0.165, 1.5);
+}
+
+.reel:hover .play-button {
+    background-color: var(--primary-500);
+    transform: scale(1.2)
+}
+
+
+/* INTRO TOP */
+
+
+#hero-bg-container {
+    height: 800px;
+    position: relative;
+}
+
+#hero-bg{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 60%;
+    z-index: 0;
+    background-image: url('../img/me-current.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    
+    
+}
+
+#hero-bg-container > .page-sections {
+    z-index: 1;
+    position: relative;
+}
+
+#hero-bg-gradient{
+    z-index: 0!important;
+    pointer-events: none;
+    position: absolute;
+    right: 20%;
+    width: 40%;
+    height: 100%;
+    background-image: linear-gradient(90deg , rgba(256,256,256,1), rgba(256,256,256,0));
+}
+
+
+#intro .section-container{ 
+    display: flex;
+    text-align: center;
+}
+
+#intro
+
+#intro .intro-text {
+    padding-top: var(--spacing-2x);
+}
+
+.hero-text {
+
+    margin: var(--spacing-2x) auto;
+    padding: var(--spacing) var(--spacing-2x);
+    width: 480px;
+    font-size: 24px;
+}
+
+/* WORK EXAMPLES */
+
+#work .grid {
+
+}

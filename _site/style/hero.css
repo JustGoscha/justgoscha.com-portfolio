@@ -1,0 +1,111 @@
+html{
+    text-align: center;
+}
+
+#video {
+    background-color: #eee;
+    position: absolute;
+    top: 2vmin;
+    bottom: 2vmin;
+    left: 2vmin;
+    right: 2vmin;
+    z-index: 0;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#text {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 8vh;
+    z-index: 1;
+
+    backdrop-filter: brightness(.9);
+    
+}
+
+h1 {
+    text-transform: uppercase;
+    font-variant: small-caps;
+    font-size: 6vmax;
+    font-weight: 400;
+    letter-spacing: .25em;
+    color: var(--primary-text-light);
+    margin-bottom: 2vmax;
+}
+
+#logo {
+    display: inline-block;
+    vertical-align: text-top;
+    width: 10vmax;
+}
+
+#seperator {
+    display: inline-block;
+    position: relative;
+    height: 60%;
+    top: 20%;
+
+    border-radius: 2px;
+    width: 2px;
+    background-color: var(--primary-text-light);
+    margin: 0 2vw;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 2.191544vmax;
+    letter-spacing: .1em;
+    padding: 0 2vw;
+    //font-size: 3vmax;
+    font-weight: 400;
+    color: var(--secondary-text-light);
+
+
+}
+
+.code {
+    font-size: .9em;
+    color: var(--hint-text-light);
+    font-weight: 400;
+    font-family: Menlo, Monaco, Fira, Fixedsys, monospace;
+}
+
+.blinking {
+    animation: .8s ease-in-out .5s infinite alternate blinking;
+}
+
+@keyframes blinking {
+    0% { opacity: 1; }
+    30% {opacity: 1; }
+    70%   { opacity: 0; }
+    100%   { opacity: 0; }
+  }
+
+@media only screen and (max-width: 600px) {
+    
+    #logo {
+        display: none;
+    }
+
+    #seperator {
+        display: none;
+    }
+
+    h1 {
+        font-size: 8vmin;
+        font-weight: 500;
+    }
+
+}
+
+

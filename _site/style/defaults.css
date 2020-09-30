@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+:root {
+    --header-size: 80px;
+    --main-content-size: 1200px;
+    --spacing: 16px;
+    --spacing-2x: 32px;
+
+    /* colors */
+    --primary-100: #FFE7E7;
+    --primary-200: #FBCBFF;
+    --primary-300: #DCA3FF;
+    --primary-400: #841DEC;
+    --primary-500: #5D07CA;
+    --primary-dark: #2D0460;
+
+    --primary-text: rgba(43,40,61,1);
+    --secondary-text: rgba(43,40,61,.7);
+    --hint-text: rgba(43,40,61,.5);
+
+    --primary-text-light: rgba(255,255,255,1);
+    --secondary-text-light: rgba(255,255,255,.8);
+    --hint-text-light: rgba(255,255,255,.6);
+
+    --seperator-color: rgba(30,0,40,.08);
+
+    --secondary-100: #BFFFD1;
+    --secondary-200: #18EC86;
+    --secondary-dark: #157C64;
+
+    --grey-100: #E7EDF0;
+    --grey-200: #CFDCDB;
+    --grey-300: #BAC8C8;
+    --grey-400: #80838B;
+    --grey-500: #555369;
+    --grey-600: #2B283D;
+}
+
+html{
+    font-family: Jost, Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: var(--primary-text);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-500);
+    transition: 0.5s color cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+a:hover {
+    color: var(--secondary-dark);
+}
+
+
+b {
+    font-weight: 500;
+}

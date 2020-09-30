@@ -1,9 +1,10 @@
 html{
     text-align: center;
+    color: #fff;
 }
 
 #video {
-    background-color: #eee;
+    background-color: #444;
     position: absolute;
     top: 2vmin;
     bottom: 2vmin;
@@ -55,6 +56,7 @@ h1 {
     height: 60%;
     top: 20%;
 
+    opacity: 40%;
     border-radius: 2px;
     width: 2px;
     background-color: var(--primary-text-light);
@@ -83,6 +85,40 @@ h2 {
 .blinking {
     animation: .8s ease-in-out .5s infinite alternate blinking;
 }
+
+/* CONTACT section */
+
+#contact {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 1;
+
+    padding-bottom: 4vmax;
+}
+
+#contact .links {
+    position: relative;
+}
+
+#contact a {
+    margin: 0 .5em;
+}
+
+#contact a svg {
+    fill: #fff;
+    fill: #fffa;
+    transition: .3s fill cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#contact a:hover svg {
+    fill: #fff;
+    fill: #ffff;
+}
+
 
 @keyframes blinking {
     0% { opacity: 1; }

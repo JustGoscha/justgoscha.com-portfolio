@@ -4,7 +4,7 @@ html{
 }
 
 #video {
-    background-color: #444;
+    background-color: rgb(55,133,224);
     position: absolute;
     top: 2vmin;
     bottom: 2vmin;

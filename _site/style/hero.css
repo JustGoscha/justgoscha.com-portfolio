@@ -40,7 +40,7 @@ h1 {
     font-size: 6vmax;
     font-weight: 400;
     letter-spacing: .25em;
-    color: var(--primary-text-light);
+    color: var(--secondary-text-light);
     margin-bottom: 2vmax;
 }
 
@@ -59,7 +59,7 @@ h1 {
     opacity: 40%;
     border-radius: 2px;
     width: 2px;
-    background-color: var(--primary-text-light);
+    background-color: var(--hint-text-light);
     margin: 0 2vw;
 }
 
@@ -70,14 +70,14 @@ h2 {
     padding: 0 2vw;
     //font-size: 3vmax;
     font-weight: 400;
-    color: var(--secondary-text-light);
+    color: var(--hint-text-light);
 
 
 }
 
 .code {
     font-size: .9em;
-    color: var(--hint-text-light);
+    color: var(--secondary-text-light);
     font-weight: 400;
     font-family: Menlo, Monaco, Fira, Fixedsys, monospace;
 }

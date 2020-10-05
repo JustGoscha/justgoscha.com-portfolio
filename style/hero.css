@@ -29,9 +29,7 @@ video {
     justify-content: center;
     padding-bottom: 8vh;
     z-index: 1;
-
-    backdrop-filter: brightness(.9);
-    
+    background-color: rgba(10,0,20,0.12);    
 }
 
 h1 {

@@ -91,32 +91,6 @@ h2 {
 #contact {
     position: absolute;
     bottom: 0;
-    width: 100vw;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    z-index: 1;
-
-    padding-bottom: 4vmax;
-}
-
-#contact .links {
-    position: relative;
-}
-
-#contact a {
-    margin: 0 .5em;
-}
-
-#contact a svg {
-    fill: #fff;
-    fill: #fffa;
-    transition: .3s fill cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-#contact a:hover svg {
-    fill: #fff;
-    fill: #ffff;
 }
 
 

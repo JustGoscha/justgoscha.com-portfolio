@@ -47,10 +47,35 @@ I call it **_EasyLoop_**. And it allows you to replace this tedious process with
 
 The new process looks like this:
 
-1. Select all the layers / footage you want to loop.
+1. Select all the layers on your timeline you want to loop.
 2. Go to **File > Scripts > EasyLoop**
 
 And done... all you need to do now is expand the clip length to whatever you want and it's perfectly looped. And it supports many compositions / layers at the same time. So what could have taken you multiple minutes before, now just takes a couple of seconds.
+
+## Installation of the Script
+
+The installation of a script is as simple as drag and drop into the right folder. Or via a menu in AE.
+
+First get the script here.
+
+### Option 1 — Menu
+
+1. File > Scripts > Install Script File....
+2. Select the script file: EasyLoop.jsx
+
+### Option 2 — Drag and Drop
+
+1. Put the `EasyLoop.jsx` file into the correct folder:
+
+Windows:
+`C:\Program Files\Adobe\Adobe After Effects 2020\Support Files\Scripts`
+
+Mac:
+`~/Applications/"Adobe After Effects 2020"/Scripts/`
+
+Replace 2020 with your version. And on windows replace the drive letter if necessary.
+
+Restart After Effects when using the Drag and Drop method.
 
 ## Assign a Shortcut for Looping (even faster)
 
@@ -65,10 +90,12 @@ Now for the true masters of the craft, let's do it with a shortcut.
 
 Now this key combination should show up right next to EasyLoop.jsx in the shortcut column. And you're good to go!
 
-I am happy to have been able to help you reclaim precious seconds of your life!
+Now you can just select the layers in your timeline and use the shortcut. Done!
+
+## Enjoy!
+
+I am happy to have been able to help you reclaim precious hours of your life! It adds up pretty quickly, believe me!
 
 Consider leaving a tip, some claps and share it to other Motion Designers / Animators if this helps you out!
 
-You can get this script here!
-
-Consider
+## Once again: (You can get this script here!)[]

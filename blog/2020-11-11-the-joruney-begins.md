@@ -35,9 +35,9 @@ I had fun doing it, with some success attached to it! This was the spark I neede
 
 As they say, when one door closes, another door opens. Through a lucky coincidence, I got the chance to work for one of the most successful startups in Europe at a very early stage. Thus began my prime time in tech. The 4 most exciting years I had in my career, with the most motivated and fun people I can imagine.
 
-It sidetracked me on my creative goals once again, but I learned so much and acquired many tools to be a successful entrepreneur during this time, that I certainly would not change a thing about it. I also transitioned by the end further into the creative field an became a UX designer within the company.
+It sidetracked me on my creative goals once again, but I learned so much and acquired many tools to be a successful entrepreneur during this time, that I certainly would not change a thing about it. I also transitioned by the end further into the creative field and became a UX designer within the company.
 
-After 3 years though, I began to form a plan to finally chase my own goals. I needed to work on 3 things to make the leap — Animation Skill, Reputation and Customers. All of that would be used to build a showreel.
+After 3 years though, I began to form a plan to finally chase my own goals. I needed to work on 3 things to make the leap — animation consistency, reputation and customers. All of that would be used to build a showreel.
 
 ## The Preparation
 
@@ -67,7 +67,7 @@ The truth is — hard science, math, physics and computer science has a reassuri
 
 The same with a program you write. If you run it and it works. At that point you know, you have done something right, since it works.
 
-Art on the other hand. Is very uncertain. Feelings towards it can be ambivalent. You can like it, everybody else can hate it or vice versa. You never know exactly where you are standing. You rely on feedback from the world. You have to be good at living with ambiguity.
+Art on the other hand. Is very uncertain. Feelings towards it can be ambivalent. You can like it, everybody else can hate it or vice versa. You never know exactly where you are standing. You rely on feedback from the world. You have to be good at living with that ambiguity.
 
 There is often no right or wrong.
 

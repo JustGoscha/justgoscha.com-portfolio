@@ -28,8 +28,8 @@ Well, this is just an insult to your work, since you spent so much time drawing 
 So you go back to work and to fix it you are going through these steps:
 
 4. Move the playhead to 1 frame before the last keyframe. And create a keyframe there. By pressing the Diamond icon on the very left of the layer.
-5. Copy the first keyframe on the timeline (Click on diamond on first keyframe, then CTRL+C / CMD+C)
-6. Paste keyframe on the last keyframe (Click on diamond of last keyframe, CTRL+V / CMD + V)
+5. Copy the first keyframe on the timeline (Click on the diamond on the first keyframe, then CTRL+C / CMD+C)
+6. Paste keyframe on the last keyframe (Click on the diamond of last keyframe, CTRL+V / CMD + V)
 
 Now you play it again, and proudly see it finally working! It's looping perfectly!
 
@@ -96,6 +96,8 @@ Now you can just select the layers in your timeline and use the shortcut. Done!
 
 I am happy to have been able to help you reclaim precious hours of your life! It adds up pretty quickly, believe me!
 
-Consider leaving a tip, some claps and share it to other Motion Designers / Animators if this helps you out!
+Consider leaving a tip, some claps and share it to other Motion Designers / Animators if this helps you out! It would certainly help me out.
 
 ## Once again: (You can get this script here!)[]
+
+Contact me if you encounter any issues!

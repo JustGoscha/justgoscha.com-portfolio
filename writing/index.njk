@@ -1,0 +1,21 @@
+---
+layout: page-layout.njk
+title: justGoscha - Writings on Animation & Life
+css: /style/blog.css
+---
+<h1>Writing on Animation</h1>
+
+<ul id="listing">
+  {% for item in medium.posts %}
+    <li>
+
+      <h3>
+        <a href="{{ item.link }}">{{ item.title }}</a>
+      </h3>
+      <p class="meta">Published on
+        {{ item.pubDate | date }}
+        {# by
+        {{ item['dc:creator'] }}</p> #}
+      </li>
+    {% endfor %}
+  </ul>

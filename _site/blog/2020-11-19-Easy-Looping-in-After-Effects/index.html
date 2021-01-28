@@ -1,0 +1,81 @@
+<h1>Easy Looping in After Effects</h1>
+<p>A faster way to loop footage, PNG sequences and imported animations in After Effects.</p>
+<p>If you are like me doing a lot of your animations outside of Adobe After Effects [AE] you might be familiar with the following problem — perfectly looping footage without blank frames or skipped frames.</p>
+<!-- Shortcut to interpret footage in your favorite framerate -->
+<h2>The Usual Way to Loop</h2>
+<p>The usual way is the following:</p>
+<ol>
+<li>Drop footage into the timeline</li>
+<li>Select your footage and &quot;Enable Time Remapping&quot;:
+a. Either by pressing <strong>CTRL+ALT+T</strong> (Mac: <strong>CMD+ALT+T</strong>)
+or
+b. <strong>Right Click &gt; Time &gt; Enable Time Remapping</strong></li>
+<li>Then <strong>ALT+Left Click</strong> on the stopwatch to open expressions of Time Remap and type in there <code>loopOut()</code>.</li>
+</ol>
+<p>Now this enables already looping. And now you can stretch out that footage in your timeline and be happy.</p>
+<p><strong>BUT WAIT!!!</strong></p>
+<p>A very attentive fellow like you will immediately notice when playing — <strong>it skips the first frame!</strong></p>
+<p>Well, this is just an insult to your work, since you spent so much time drawing that first frame! Unacceptable!</p>
+<p>So you go back to work and to fix it you are going through these steps:</p>
+<ol start="4">
+<li>Move the playhead to 1 frame before the last keyframe. And create a keyframe there. By pressing the Diamond icon on the very left of the layer.</li>
+<li>Copy the first keyframe on the timeline (Click on the diamond on the first keyframe, then CTRL+C / CMD+C)</li>
+<li>Paste keyframe on the last keyframe (Click on the diamond of last keyframe, CTRL+V / CMD + V)</li>
+</ol>
+<p>Now you play it again, and proudly see it finally working! It's looping perfectly!</p>
+<p>Before you realize in horror, you have to do it for the 10 other imported animations you have all over again. Each time you get more efficient... but it still takes you 30 seconds per animation every time. You think of all the times you have to do this work now and in your future. All the mindless work, that will keep you away, from your loved ones!</p>
+<p>But do not despair! <strong>There is a better way.</strong></p>
+<p>And here is how...</p>
+<h2>The Faster Way to Loop</h2>
+<p>I had the same problem, over and over again. That's why I sat down one day and automated that task with a script.</p>
+<p>I call it <strong><em>EasyLoop</em></strong>. And it allows you to replace this tedious process with just 2 clicks. Or 1 click if you assign a shortcut (I show you how below.)</p>
+<p>The new process looks like this:</p>
+<ol>
+<li>Select all the layers on your timeline you want to loop.</li>
+<li>Go to <strong>File &gt; Scripts &gt; EasyLoop</strong></li>
+</ol>
+<p>And done... all you need to do now is expand the clip length to whatever you want and it's perfectly looped. And it supports many compositions / layers at the same time. So what could have taken you multiple minutes before, now just takes a couple of seconds.</p>
+<h2>Installation of the Script</h2>
+<p>The installation of a script is as simple as drag and drop into the right folder. Or via a menu in AE.</p>
+<p>First get the script here.</p>
+<h3>Option 1 — Menu</h3>
+<ol>
+<li>File &gt; Scripts &gt; Install Script File....</li>
+<li>Select the script file: EasyLoop.jsx</li>
+</ol>
+<h3>Option 2 — Drag and Drop</h3>
+<ol>
+<li>Put the <code>EasyLoop.jsx</code> file into the correct folder:</li>
+</ol>
+<p>Windows:
+<code>C:\Program Files\Adobe\Adobe After Effects 2020\Support Files\Scripts</code></p>
+<p>Mac:
+<code>~/Applications/&quot;Adobe After Effects 2020&quot;/Scripts/</code></p>
+<p>Replace 2020 with your version. And on windows replace the drive letter if necessary.</p>
+<p>Restart After Effects when using the Drag and Drop method.</p>
+<h2>Assign a Shortcut for Looping (even faster)</h2>
+<p>Now for the true masters of the craft, let's do it with a shortcut.</p>
+<ol>
+<li>
+<p>Go to <strong>Edit &gt; Keyboard Shortcuts</strong></p>
+</li>
+<li>
+<p>Check out which shortcuts are still free on your setup, by just pressing key combinations. Find a free one you like. CTRL+ALT+L is already taken for me, so I will go with CTRL+ALT+8 (because 8 is like a standing loop symbol. #SymbolicShortcutsFTW)</p>
+</li>
+<li>
+<p>Type in <code>EasyLoop</code> into the search.</p>
+</li>
+<li>
+<p>Double click into the shortcut column next to EasyLoop.jsx</p>
+</li>
+<li>
+<p>Press your preferred key combination (e.g. CTRL+ALT+8)</p>
+</li>
+</ol>
+<p>Now this key combination should show up right next to EasyLoop.jsx in the shortcut column. And you're good to go!</p>
+<p>Now you can just select the layers in your timeline and use the shortcut. Done!</p>
+<h2>Enjoy!</h2>
+<p>I am happy to have been able to help you reclaim precious hours of your life! It adds up pretty quickly, believe me!</p>
+<p>Consider leaving a tip, some claps and share it to other Motion Designers / Animators if this helps you out! It would certainly help me out.</p>
+<h2>Once again: (You can get this script here!)[]</h2>
+<p>Contact me if you encounter any issues!</p>

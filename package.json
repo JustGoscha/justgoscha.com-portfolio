@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "This is my portfolio site.  Build with eleventy.",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "axios": "^0.21.1",
+    "xml2js": "^0.4.23"
+  },
   "devDependencies": {},
   "scripts": {
     "build": "npx eleventy",

@@ -1,0 +1,38 @@
+#listing {
+  width: auto;
+  max-width: 720px;
+  margin: var(--spacing-2x) auto;
+  list-style-type: square;
+  padding: var(--spacing);
+}
+
+#listing li {
+  margin-bottom: calc(var(--spacing) * 4);
+}
+
+#listing .meta {
+  font-size: 0.75em;
+  color: var(--hint-text-light);
+}
+
+#listing h3 {
+  line-height: 1.3;
+}
+
+@media only screen and (max-width: 600px) {
+  #listing {
+    /* width: auto; */
+    max-width: 100%;
+    list-style-type: none;
+    padding: var(--spacing);
+  }
+
+  #listing li {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+
+  #listing h3 {
+    font-size: 1em;
+    line-height: 1.3;
+  }
+}

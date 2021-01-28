@@ -1,59 +1,24 @@
-html {
-    background-color: #15023a;
-    color: #fff;
-    color: rgba(200,245,255,.88)
-}
-
-.header{
-    padding: 1em;
-    text-align: center;
-}
-
-#logo {
-    margin: auto;
-    opacity: .8;
-    width: 144px;
-    transition: .4s opacity cubic-bezier(0.075, 0.82, 0.165, 1),
-        .4s transform cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-#logo:hover {
-    opacity: 1;
-    transform: scale(1.05);
-}
-
-
-h1 {
-    font-size: 4vmax;
-    font-weight: 400;
-    text-align: center;
-}
-
-h2 {
-    font-weight: 400;
-}
 .showreel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
-    margin: 1em;
+  margin: 1em;
 }
 
 .services {
-    margin: auto;
-    padding: 1em;
-    max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  max-width: 800px;
 }
 
 p {
-    margin-bottom: 1em;
-    line-height: 1.4;
+  margin-bottom: 1em;
+  line-height: 1.4;
 }
 
-b{
-    font-weight: 500;
-    color: rgba(255,255,255,1);
+b {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
 }
-

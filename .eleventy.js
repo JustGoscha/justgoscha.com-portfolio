@@ -1,9 +1,14 @@
-module.exports = function(eleventyConfig) {
-    eleventyConfig.addPassthroughCopy('style')
-    eleventyConfig.addPassthroughCopy('img')
-    eleventyConfig.addWatchTarget('./style/*')
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy("style");
+  eleventyConfig.addPassthroughCopy("img");
+  eleventyConfig.addWatchTarget("./style/*");
 
-    return {
-      passthroughFileCopy: true
-    }
-  }
+  eleventyConfig.addFilter("date", require("./filters/dates.js"));
+
+  return {
+    feed:
+      process.env.MEDIUM_FEED ||
+      "https://medium.com/feed/the-inspired-animator",
+    passthroughFileCopy: true,
+  };
+};

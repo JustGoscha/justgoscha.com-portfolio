@@ -34,6 +34,15 @@
   --grey-400: #80838b;
   --grey-500: #555369;
   --grey-600: #2b283d;
+
+  --chip-1: #D86E8E;
+  --chip-2: #E49F7F;
+  --chip-3: #F1D24E;
+  --chip-4: #4EBF89;
+  --chip-5: #5794D9;
+  --chip-6: #525ED5;
+  --chip-7: #9153DF;
+
 }
 
 html {

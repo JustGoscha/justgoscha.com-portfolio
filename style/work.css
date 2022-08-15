@@ -7,6 +7,10 @@
     margin: 1em;
 }
 
+p {
+    margin: 1em 0;
+}
+
 .work>h2 {
     text-align: center;
     padding-top: 1em;
@@ -115,8 +119,8 @@
 
 
 .tag{
-    color: var(--secondary-text);
-    font-size: 0.66em;
+    color: var(--primary-text-light);
+    font-size: 0.75em;
     font-weight: 400;
     display: inline-block;
     background-color: #ddd;
@@ -144,15 +148,21 @@
 .tag.d2 {
     background-color: var(--chip-5);
 }
+.tag.d3 {
+    background-color: var(--chip-6);
+}
 
 @media only screen and (max-width: 960px) {
+    .project-grid {
+        font-size: .825em;
+    }
     .project-grid {
         display:grid;
         width: 90vw;
         max-width: 480px;
         min-width: 0;
         grid-template-columns: repeat(1, 1fr);
-        grid-gap: 48px 32px;
+        grid-gap: 32px 32px;
     }
     
     .project:hover .additional-content{

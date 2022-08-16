@@ -75,13 +75,9 @@ p {
     display: block;
     position: absolute;
     pointer-events: none;
+
     top:0;
     opacity: 0;
-}
-
-.project:hover.bg {
-    pointer-events: none;
-    backdrop-filter: blur(20px);
 }
 
 .project:hover .additional-content{
@@ -89,12 +85,13 @@ p {
     padding: 2em;
     opacity: 1;
     overflow: hidden;
+    pointer-events: initial;
     
     backdrop-filter: blur(15px);
     
     z-index: 1;
     color: var(--primary-text);
-    background-color: #ffffffaa;
+    background-color: #ffffffcc;
     box-shadow: 0px 2px 2px 0 rgba(0,12,30,.1),
                 0px 4px 4px -2px rgba(0,12,30,.1),
                 0px 8px 8px -4px rgba(0,12,30,.1),

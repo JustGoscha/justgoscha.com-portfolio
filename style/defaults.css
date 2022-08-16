@@ -42,6 +42,7 @@
   --chip-5: #5794D9;
   --chip-6: #525ED5;
   --chip-7: #9153DF;
+  --chip-8: #c9598d;
 
 }
 
@@ -100,3 +101,8 @@ b {
   fill: #fff;
   fill: #ffff;
 }
+
+b {
+  font-weight: 500;
+}
+

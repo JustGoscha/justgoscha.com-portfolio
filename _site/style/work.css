@@ -26,19 +26,47 @@ p {
 .project-grid {
     margin: auto;
     padding-bottom: 3em; 
-    display:grid;
+    display: grid;
     width: 80vw;
     max-width: 1280px;
     min-width: 960px;
 
 
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 16px 16px;
+    grid-gap: 32px 32px;
 }
 
 .project{
     position: relative;
 }
+
+.project header{
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    font-size: .84em;
+}
+
+.project header .seperator {
+    flex-grow: 2;
+    height: 2px;
+    margin: 0 .5em;
+    align-self: center;
+    background-color: var(--seperator-color);
+    color:  var(--seperator-color);
+}
+
+.project-title {
+    font-weight: 500;
+    color: var(--secondary-text);
+}
+
+.project .date {
+    font-size: .84em;
+    font-weight: 400;
+    color: var(--hint-text);
+}
+
 
 .project .additional-content{
     margin: 0;
@@ -51,16 +79,22 @@ p {
     opacity: 0;
 }
 
+.project:hover.bg {
+    pointer-events: none;
+    backdrop-filter: blur(20px);
+}
+
 .project:hover .additional-content{
-    margin: -2em -2em -2em -2em;
+    margin: -2em;
     padding: 2em;
     opacity: 1;
     overflow: hidden;
-
+    
+    backdrop-filter: blur(15px);
     
     z-index: 1;
     color: var(--primary-text);
-    background-color: #fff;
+    background-color: #ffffffaa;
     box-shadow: 0px 2px 2px 0 rgba(0,12,30,.1),
                 0px 4px 4px -2px rgba(0,12,30,.1),
                 0px 8px 8px -4px rgba(0,12,30,.1),
@@ -77,12 +111,16 @@ p {
                 padding .3s;
 }
 
-.project:hover .additional-content .project-title{
+.project:hover .additional-content .interactive {
+    pointer-events: initial;
+}
+
+.project:hover .additional-content header{
     transform: translateY(0em);
 
 }
 
-.project .additional-content .project-title{
+.project .additional-content header{
     margin: 0.5em 0 1em 0;
     transform: translateY(-.5em);
     transition: transform .3s;
@@ -129,27 +167,34 @@ p {
     border-radius: 30px;
 }
 
-.tag.vr {
+.tag.d2 {
     background-color: var(--chip-1);
 }
-
-.tag.illustration {
+.tag.d3 {
     background-color: var(--chip-2);
 }
 
-.tag.trailer {
+.tag.illustration {
     background-color: var(--chip-3);
 }
 
-.tag.ui-ux {
+.tag.motion-design {
     background-color: var(--chip-4);
 }
 
-.tag.d2 {
+.tag.ui-ux {
     background-color: var(--chip-5);
 }
-.tag.d3 {
+
+
+.tag.sound-design {
     background-color: var(--chip-6);
+}
+.tag.vr {
+    background-color: var(--chip-7);
+}
+.tag.product {
+    background-color: var(--chip-8);
 }
 
 @media only screen and (max-width: 960px) {

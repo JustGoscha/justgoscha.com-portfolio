@@ -80,6 +80,8 @@ p {
     opacity: 0;
 }
 
+
+
 .project:hover .additional-content{
     margin: -2em;
     padding: 2em;
@@ -133,6 +135,24 @@ p {
     transform: translateY(100px);
     transition: opacity .3s ease-out .2s,
                 transform .5s cubic-bezier(.17,.84,.44,1) 0s;
+}
+
+.additional-content a{
+    font-weight: 400;
+    font-size: .875em;
+    border-bottom: 1px solid;
+    color: var(--link-color);
+}
+.additional-content a:hover{
+    color: var(--link-hover);
+}
+
+.additional-content a::before {
+    content: "🡥 ";
+    border: none;
+    display: inline-block;
+    position: absolute;
+    left: -1em;
 }
 
 .project:hover .description{

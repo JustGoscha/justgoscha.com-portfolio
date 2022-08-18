@@ -24,10 +24,18 @@
 
   --seperator-color: rgba(30, 0, 40, 0.08);
 
+  
   --secondary-100: #bfffd1;
   --secondary-200: #18ec86;
+  --secondary-500: #21997d;
   --secondary-dark: #157c64;
 
+  --link-color-light: var(--secondary-200);
+  --link-hover-light: var(--secondary-100);
+
+  --link-color: var(--secondary-dark);
+  --link-hover: var(--secondary-500);
+  
   --grey-100: #e7edf0;
   --grey-200: #cfdcdb;
   --grey-300: #bac8c8;
@@ -59,12 +67,12 @@ h1 {
 
 a {
   text-decoration: none;
-  color: var(--primary-500);
+  color: var(--link-color-light);
   transition: 0.5s color cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 a:hover {
-  color: var(--secondary-dark);
+  color: var(--link-hover-light);
 }
 
 b {

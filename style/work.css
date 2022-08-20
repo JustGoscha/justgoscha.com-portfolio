@@ -28,7 +28,6 @@ p {
 .work {
     color: var(--primary-text);
     background-color: var(--grey-200);
-    margin-bottom: 3em;
 }
 
 .project-grid {
@@ -222,29 +221,6 @@ p {
 .tag.product {
     background-color: var(--chip-8);
 }
-
-/* ------------- CONTACT ME --------------- */
-
-.contact-me {
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    
-    background-color: var(--primary-700);
-    color: var(--primary-text-light);
-
-    padding: 3em 0;
-    font-size: 1.618em;
-    text-align: center;
-}
-
-.wrapper{
-    margin: auto;
-    width: 80vw;
-    max-width: 1280px;
-    min-width: 960px;
-}
-
 
 /* ------------- MOBILE LAST -------------- */
 

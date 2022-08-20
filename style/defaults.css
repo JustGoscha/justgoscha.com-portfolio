@@ -12,7 +12,7 @@
   --primary-300: #dca3ff;
   --primary-400: #841dec;
   --primary-500: #5d07ca;
-  --primary-700: #362050;
+  --primary-700: #2f1b5b;
   --primary-dark: #2d0460;
 
   --primary-text: rgba(43, 40, 61, 1);
@@ -80,6 +80,29 @@ b {
   font-weight: 500;
 }
 
+/* ------------- CONTACT ME --------------- */
+
+.contact-me {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  
+  background-color: var(--primary-700);
+  color: var(--primary-text-light);
+
+  padding: 3em 0;
+  font-size: 1.618em;
+  text-align: center;
+}
+
+.wrapper{
+  margin: auto;
+  width: 80vw;
+  max-width: 1280px;
+  min-width: 960px;
+}
+
+
 /* CONTACT section */
 
 #contact {
@@ -89,7 +112,7 @@ b {
   justify-content: center;
   z-index: 1;
 
-  padding-bottom: 4vmax;
+  padding: 2vmax 0 4vmax;
 }
 
 #contact .links {

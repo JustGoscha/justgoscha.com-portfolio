@@ -12,6 +12,7 @@
   --primary-300: #dca3ff;
   --primary-400: #841dec;
   --primary-500: #5d07ca;
+  --primary-700: #2f1b5b;
   --primary-dark: #2d0460;
 
   --primary-text: rgba(43, 40, 61, 1);
@@ -24,16 +25,34 @@
 
   --seperator-color: rgba(30, 0, 40, 0.08);
 
+  
   --secondary-100: #bfffd1;
   --secondary-200: #18ec86;
+  --secondary-500: #21997d;
   --secondary-dark: #157c64;
 
+  --link-color-light: var(--secondary-200);
+  --link-hover-light: var(--secondary-100);
+
+  --link-color: var(--secondary-dark);
+  --link-hover: var(--secondary-500);
+  
   --grey-100: #e7edf0;
   --grey-200: #cfdcdb;
   --grey-300: #bac8c8;
   --grey-400: #80838b;
   --grey-500: #555369;
   --grey-600: #2b283d;
+
+  --chip-1: #D86E8E;
+  --chip-2: #E49F7F;
+  --chip-3: #F1D24E;
+  --chip-4: #4EBF89;
+  --chip-5: #5794D9;
+  --chip-6: #525ED5;
+  --chip-7: #9153DF;
+  --chip-8: #c9598d;
+
 }
 
 html {
@@ -49,36 +68,73 @@ h1 {
 
 a {
   text-decoration: none;
-  color: var(--primary-500);
+  color: var(--link-color-light);
   transition: 0.5s color cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 a:hover {
-  color: var(--secondary-dark);
+  color: var(--link-hover-light);
 }
 
 b {
   font-weight: 500;
 }
 
+.content {
+  margin: auto;
+  padding: 1em;
+  max-width: 800px;
+}
+/* ------------- CONTACT ME --------------- */
+
+.contact-me {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  
+  background-color: var(--primary-700);
+  color: var(--primary-text-light);
+
+  padding: 3em 0;
+  font-size: 1.618em;
+  text-align: center;
+}
+
+.wrapper{
+  margin: auto;
+  width: 80vw;
+  max-width: 1280px;
+  min-width: 960px;
+}
+
+
 /* CONTACT section */
 
 #contact {
   width: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  text-align: center;
   z-index: 1;
 
-  padding-bottom: 4vmax;
+  padding: 2vmax 0 1vmax;
 }
 
 #contact .links {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   position: relative;
+  margin-bottom: 2vmax;
 }
 
 #contact a {
   margin: 0 0.5em;
+  color: #fff;
+  color: #fff8;
+  font-size: .816em;;
+}
+
+#contact a:hover {
+  color: #fffb;
 }
 
 #contact a svg {
@@ -91,3 +147,8 @@ b {
   fill: #fff;
   fill: #ffff;
 }
+
+b {
+  font-weight: 500;
+}
+

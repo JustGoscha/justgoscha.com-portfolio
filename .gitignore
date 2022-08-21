@@ -1,6 +1,2 @@
 node_modules
-*.psd
-
-'.\img\Profile Pic.psd' 
-git filter-branch --index-filter 'rm -f img\Profile Pic.psd' -- --all
-git filter-repo --invert-paths --path filename 'img\Profile Pic.psd'
+_site

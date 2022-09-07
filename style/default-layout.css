@@ -11,7 +11,7 @@ html {
   display: flex;
   align-items: center;
   height: 144px;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 #header-nav {

@@ -132,6 +132,22 @@ h2 {
 
 @media only screen and (max-width: 600px) {
     
+    #header-nav {
+        position: absolute;
+        height: 64px;
+        overflow: auto;
+        font-size: 4vw;
+        width: 100%;
+        top:0;
+        justify-content: center;
+    }
+    
+      #header-nav > div {
+        margin: 0 0 0 1.5em;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
     #logo {
         display: none;
     }
@@ -143,6 +159,11 @@ h2 {
     h1 {
         font-size: 8vmin;
         font-weight: 500;
+    }
+
+    section#content {
+        position: absolute;
+        top:0;
     }
 
 }

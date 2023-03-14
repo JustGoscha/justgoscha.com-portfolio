@@ -163,6 +163,10 @@ p {
     left: -1em;
 }
 
+.project .img-hover img {
+    width: 100%;
+}
+
 .project:hover .description{
     transform: translateX(0px);
     opacity: 1;

@@ -156,11 +156,12 @@ p {
 }
 
 .additional-content a::before {
-    content: "🡥 ";
+    content: "\2197";
     border: none;
-    display: inline-block;
+    padding-right: .2em;
+    /* display: inline-block;
     position: absolute;
-    left: -1em;
+    left: -1.2em; */
 }
 
 .project .img-hover img {

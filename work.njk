@@ -38,7 +38,7 @@ css: /style/work.css
                     </header>
 
                     <div class="description">
-                        {{ project.description | safe }}
+                        {{ project.description | markdown | safe }}
                     </div>
                     <div class="tags">
                         {% for tag in project.tags %}

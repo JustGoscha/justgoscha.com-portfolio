@@ -4,9 +4,52 @@ title: justGoscha — Portfolio & Work
 css: /style/work.css
 ---
 
+
+
 <div class="intro">
-    <h1>Animation Showreel 2022</h1>
+    <h1>Work</h1>
     <p>Scroll down to see more work 👇</p>
+</div>
+
+<section class="cv">
+    <h2>Curriculum Vitae</h2>
+    <section class="work-table">
+        {% for work in projects.work %}
+        <div class="work-item">
+            <header>
+                <img class="work-img" src="{{ work.static_image }}" alt="{{ work.title }}">
+                <div class="general-info">
+                    <h3 class="company-title">{{ work.company }}</h3>
+                    <div class="position-title">{{ work.position }}</div>
+                    <div class="date">{{ work.from.slice(0,7) }} - {{ work.to.slice(0,7) }}</div>
+                </div>
+            </header>
+
+            <div class="additional-content">
+                <div class="interactive">
+                    <div class="description">
+                        {{ work.description | markdown | safe }}
+                    </div>
+                    <div class="achievements">
+                        <h5>Notable Achievements</h5>
+                            {% for a in work.achievements %}
+                            <div class="achievement">
+                                <div class="star">{{a.emoji}}</div>
+                                <div class="achievement-text">{{ a.text }}</div>
+                            </div>
+                            {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+</section>  
+
+
+<div class="motion-design">
+    <h2>Motion Design Work</h2>
+    <p>I'm still proud of my time as an animator and motion designer, so here's a selection of work I did during that time.</p>
 </div>
 
 <section class="showreel">

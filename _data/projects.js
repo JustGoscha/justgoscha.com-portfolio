@@ -24,42 +24,132 @@ const work = [
   {
     "company": "Deed",
     "companyLink": "https://joindeed.com",
-    "position": "Engineering Team Lead",
+    "position": "Senior Engineering Team Lead",
     "from": "2023-11-15",
     "to": "2025-06-30",
+    "static_image": "/img/work/jobs/deed.png",
     "description": "Leading the Customer Experience Team responsible for the Web and Mobile Apps.",
     "achievements": [
-      "Championed and introduced AI coding tools. Brought usage from <10% to 100% of the engineering team.",
-      "Helped the biggest client WALMART to move 10x more money through a critical donation pipeline.",
-      "Built and maintained business critical Nonprofit Search Engine and improved it's search speed from 10+ seconds to 1 second.",
-      "Decreased time to release from 2 hours to <30minutes.",
-      "Highest team satisfaction in the company—through empathectic leadership and clear communication."
+      {
+        "emoji": "⭐",
+        "text": "Championed and introduced AI coding tools. Brought usage from <10% to 100% of the engineering team."
+      },
+      {
+        "emoji": "💰",
+        "text": "Helped the biggest client WALMART to move 10x more money through a critical donation pipeline."
+      },
+      {
+        "emoji": "⚡",
+        "text": "Built and maintained business critical Nonprofit Search Engine and improved it's search speed from 10+ seconds to 1 second."
+      },
+      {
+        "emoji": "🚀",
+        "text": "Decreased time to release from 2 hours to <30minutes."
+      },
+      {
+        "emoji": "👥",
+        "text": "Highest team satisfaction in the company—through empathectic leadership and clear communication."
+      }
     ],
   },
   {
-    "company": "Forto",
-    "companyLink": "https://forto.com",
-    "position": "Freelance UX Lead",
-    "to": "2021-05-01",
-    "from": "2021-11-01",
-    "description": "I was brought back in a tough spot to onboard the new Director of Design and multiple new design hires for the team.",
+    "company": "Freelance",
+    "position": "Digital Animation Producer",
+    "from": "2020-11-01",
+    "to": "2023-10-31",
+    "static_image": "/img/work/jobs/freelance.png",
+    "description": "Handled complete creative and production process for animated projects and managed high-value client relationships.",
     "achievements": [
-      "Setting the vision and creating designs for the new Smart Task Management System 2.0",
-      "Consolidating internal booking process (Pre-, Main-, and On-Carriage) into a single system, to imrpove OPS efficiency via better UX"
+      {
+        "emoji": "📋",
+        "text": "Managed tasks, schedules, and client expectations for 5-figure video/motion design projects"
+      },
+      {
+        "emoji": "🎨",
+        "text": "Worked on projects using 2D, 3D, VR, AI animation tools"
+      },
+      {
+        "emoji": "🚀",
+        "text": "Developed and launched multiple digital products and tools utilizing AI"
+      }
     ]
   },
   {
     "company": "Forto",
     "companyLink": "https://forto.com",
-    "position": "Founding Engineer, Team Lead, UX Lead",
-    "from": "2016-05-01",
-    "to": "2020-10-01",
-    "description": "Hard to summarize in a few sentences how much this role has shaped me.",
+    "position": "Freelance Senior Product Designer",
+    "from": "2021-05-01",
+    "to": "2021-11-30",
+    "static_image": "/img/work/jobs/forto1.png",
+    "description": "Onboarding and supporting VP design in building up design leadership within the company.",
     "achievements": [
-      "0 to 1 product development and growth into a unicorn startup.",
-      "Responsible for building and maintaining many core services and features—architecture, performance, design, and development.",
-      "My Real-time Task Management System elevated a single Ops Manager to handle over 200 shipments in parallel (from initially being able to handle 10-30 shipments at a time)",
-      "The people I hired and managed grew from juniors into top performers and remained with the company longer than the typical employee tenure.",
+      {
+        "emoji": "🎯",
+        "text": "Setting the vision and creating designs for the new Smart Task Management System 2.0"
+      },
+      {
+        "emoji": "🔄",
+        "text": "Consolidating internal booking process (Pre-, Main-, and On-Carriage) into a single system, to imrpove OPS efficiency via better UX"
+      }
+    ]
+  },
+  {
+    "company": "Forto",
+    "companyLink": "https://forto.com",
+    "position": "Founding Engineer > Engineering Team Lead > UX Lead",
+    "from": "2016-05-01",
+    "to": "2020-10-31",
+    "static_image": "/img/work/jobs/forto2.png",
+    "description": "Responsible for developing, designing, and launching the Forto platform from ground up, then leading engineering teams and UX initiatives.",
+    "achievements": [
+      {
+        "emoji": "🦄",
+        "text": "0 to 1 product development and growth into a unicorn startup."
+      },
+      {
+        "emoji": "🏗️",
+        "text": "Responsible for building and maintaining many core services and features—architecture, performance, design, and development."
+      },
+      {
+        "emoji": "📦",
+        "text": "My Real-time Task Management System elevated a single Ops Manager to handle over 200 shipments in parallel (from initially being able to handle 10-30 shipments at a time)"
+      },
+      {
+        "emoji": "🌱",
+        "text": "The people I hired and managed grew from juniors into top performers and remained with the company longer than the typical employee tenure."
+      }
+    ]
+  },
+  {
+    "company": "Oximity GmbH",
+    "position": "Front-End Engineer",
+    "from": "2014-05-01",
+    "to": "2016-03-31",
+    "static_image": "/img/work/jobs/oximity.png",
+    "description": "Implementing front-end features for a crowd-sourced news platform with over 1,000,000 users.",
+    "achievements": [
+      {
+        "emoji": "✅",
+        "text": "Ensuring flawless operation with nearly 100% end-2-end test coverage"
+      }
+    ]
+  },
+  {
+    "company": "Fraunhofer FOKUS",
+    "position": "Full-Stack Engineer (Working Student)",
+    "from": "2010-12-01",
+    "to": "2014-04-30",
+    "static_image": "/img/work/jobs/fokus.png",
+    "description": "Created UX/UI prototypes and applications for cutting-edge video conferencing systems in the browser.",
+    "achievements": [
+      {
+        "emoji": "📹",
+        "text": "Built a WebRTC-based video conferencing system in the browser—imagine Zoom in the browser in 2012"
+      },
+      {
+        "emoji": "💻",
+        "text": "Worked with Next Generation Networks (3G, 4G), programmed JAVA and C/C++"
+      }
     ]
   }
 ]

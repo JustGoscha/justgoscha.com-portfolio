@@ -9,6 +9,61 @@ const tagMapping = {
   "ui-ux": "UI/UX"
 };
 
+const skills = [
+  "UI/UX",
+  "Software Development",
+  "AI Integration",
+  "AI Coding",
+  "Product Management",
+  "DevOps",
+  "Leadership",
+  "Customer Communication",
+]
+
+const work = [
+  {
+    "company": "Deed",
+    "companyLink": "https://joindeed.com",
+    "position": "Engineering Team Lead",
+    "from": "2023-11-15",
+    "to": "2025-06-30",
+    "description": "Leading the Customer Experience Team responsible for the Web and Mobile Apps.",
+    "achievements": [
+      "Championed and introduced AI coding tools. Brought usage from <10% to 100% of the engineering team.",
+      "Helped the biggest client WALMART to move 10x more money through a critical donation pipeline.",
+      "Built and maintained business critical Nonprofit Search Engine and improved it's search speed from 10+ seconds to 1 second.",
+      "Decreased time to release from 2 hours to <30minutes.",
+      "Highest team satisfaction in the company—through empathectic leadership and clear communication."
+    ],
+  },
+  {
+    "company": "Forto",
+    "companyLink": "https://forto.com",
+    "position": "Freelance UX Lead",
+    "to": "2021-05-01",
+    "from": "2021-11-01",
+    "description": "I was brought back in a tough spot to onboard the new Director of Design and multiple new design hires for the team.",
+    "achievements": [
+      "Setting the vision and creating designs for the new Smart Task Management System 2.0",
+      "Consolidating internal booking process (Pre-, Main-, and On-Carriage) into a single system, to imrpove OPS efficiency via better UX"
+    ]
+  },
+  {
+    "company": "Forto",
+    "companyLink": "https://forto.com",
+    "position": "Founding Engineer, Team Lead, UX Lead",
+    "from": "2016-05-01",
+    "to": "2020-10-01",
+    "description": "Hard to summarize in a few sentences how much this role has shaped me.",
+    "achievements": [
+      "0 to 1 product development and growth into a unicorn startup.",
+      "Responsible for building and maintaining many core services and features—architecture, performance, design, and development.",
+      "My Real-time Task Management System elevated a single Ops Manager to handle over 200 shipments in parallel (from initially being able to handle 10-30 shipments at a time)",
+      "The people I hired and managed grew from juniors into top performers and remained with the company longer than the typical employee tenure.",
+    ]
+  }
+]
+
 const projects = [
   {
     "title": "30DayAnimator Course",
@@ -227,6 +282,7 @@ From that experience came also a first short film that compiled all the cycles i
 ];
 
 module.exports = {
+  work,
   projects,
   tagMapping
 };

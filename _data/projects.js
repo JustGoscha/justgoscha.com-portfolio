@@ -40,7 +40,7 @@ const work = [
       },
       {
         "emoji": "⚡",
-        "text": "Built and maintained business critical Nonprofit Search Engine and improved it's search speed from 10+ seconds to 1 second."
+        "text": "Built and maintained business critical Nonprofit Search Engine and improved its search speed from 10+ seconds to 1 second."
       },
       {
         "emoji": "🚀",
@@ -48,7 +48,7 @@ const work = [
       },
       {
         "emoji": "👥",
-        "text": "Highest team satisfaction in the company—through empathectic leadership and clear communication."
+        "text": "Highest team satisfaction in the company—through empathetic leadership and clear communication."
       }
     ],
   },
@@ -89,7 +89,7 @@ const work = [
       },
       {
         "emoji": "🔄",
-        "text": "Consolidating internal booking process (Pre-, Main-, and On-Carriage) into a single system, to imrpove OPS efficiency via better UX"
+        "text": "Consolidating internal booking process (Pre-, Main-, and On-Carriage) into a single system, to improve OPS efficiency via better UX"
       }
     ]
   },
@@ -130,7 +130,7 @@ const work = [
     "achievements": [
       {
         "emoji": "✅",
-        "text": "Ensuring flawless operation with nearly 100% end-2-end test coverage"
+        "text": "Ensuring flawless operation with nearly 100% end-to-end test coverage"
       }
     ]
   },
@@ -148,7 +148,7 @@ const work = [
       },
       {
         "emoji": "💻",
-        "text": "Worked with Next Generation Networks (3G, 4G), programmed JAVA and C/C++"
+        "text": "Worked with Next Generation Networks (3G, 4G), programmed Java and C/C++"
       }
     ]
   }

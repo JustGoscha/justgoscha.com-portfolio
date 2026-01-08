@@ -45,7 +45,7 @@ video {
 h1 {
     text-transform: uppercase;
     font-variant: small-caps;
-    font-size: 6vmax;
+    font-size: 5vmax;
     font-weight: 400;
     letter-spacing: .25em;
     color: var(--secondary-text-light);
@@ -73,11 +73,11 @@ h1 {
 
 h2 {
     text-transform: uppercase;
-    font-size: 2.191544vmax;
-    letter-spacing: .1em;
+    font-size: 1.9vmax;
+    letter-spacing: .05em;
     padding: 0 2vw;
     font-weight: 400;
-    color: var(--hint-text-light);
+    color: var(--secondary-text-light);
 }
 
 .code {

@@ -4,9 +4,52 @@ title: justGoscha — Portfolio & Work
 css: /style/work.css
 ---
 
+
+
 <div class="intro">
-    <h1>Animation Showreel 2022</h1>
-    <p>Scroll down to see more work 👇</p>
+    <h1>My Work</h1>
+    <p>Here is a collection of my past work and projects.</p>
+</div>
+
+<section class="cv">
+    <h2>Curriculum Vitae</h2>
+    <section class="work-table">
+        {% for work in projects.work %}
+        <div class="work-item">
+            <header>
+                <img class="work-img" src="{{ work.static_image }}" alt="{{ work.title }}">
+                <div class="general-info">
+                    <h3 class="company-title">{{ work.company }}</h3>
+                    <div class="position-title">{{ work.position }}</div>
+                    <div class="date">{{ work.from.slice(0,7) }} - {{ work.to.slice(0,7) }}</div>
+                </div>
+            </header>
+
+            <div class="additional-content">
+                <div class="interactive">
+                    <div class="description">
+                        {{ work.description | markdown | safe }}
+                    </div>
+                    <div class="achievements">
+                        <h5>Notable Achievements</h5>
+                            {% for a in work.achievements %}
+                            <div class="achievement">
+                                <div class="star">{{a.emoji}}</div>
+                                <div class="achievement-text">{{ a.text }}</div>
+                            </div>
+                            {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+</section>  
+
+
+<div class="motion-design">
+    <h2>Motion Design Work</h2>
+    <p>I'm still proud of my time as an animator and motion designer, so here's a selection of work I did during that time.</p>
 </div>
 
 <section class="showreel">
@@ -16,721 +59,38 @@ css: /style/work.css
 
 
 <section class="work">
-    <h2>Work + Projects</h2>
+    <h2>Animation and Motion Design Work</h2>
 
     <section class="project-grid">
+        {% for project in projects.projects %}
         <div class="project">
-            <img class="project-img" src="/img/work/2023-30dayanimator.jpg" alt="30DayAnimator - Level Up Your Animation">
+            <img class="project-img" src="{{ project.static_image }}" alt="{{ project.title }}">
             <header>
-                <h3 class="project-title">30DayAnimator Course</h3>
-                <div class="date">2023</div>
+                <h3 class="project-title">{{ project.title }}</h3>
+                <div class="date">{{ project.date }}</div>
             </header>
 
             <div class="additional-content">
                 <div class="interactive">
                     <div class="img-hover">
-                        <img class="project-img" src="/img/work/2023-30dayanimator.gif" alt="30DayAnimator - Level Up Your Animation">
+                        <img class="project-img" src="{{ project.animated_image }}" alt="{{ project.title }}">
                     </div>
                     <header>
-                        <h3 class="project-title">30DayAnimator Course</h3>
-
-                        <div class="date">2023</div>
+                        <h3 class="project-title">{{ project.title }}</h3>
+                        <div class="date">{{ project.date }}</div>
                     </header>
-                    
+
                     <div class="description">
-                        <p>
-                            I created this animation course to teach animation to people in a new and simple way.                            
-                        </p>
-                        <p>
-                            <ul>
-                                <li>1 step at a time.</li>
-                                <li>1 exercise daily, to be completed in 1 hour or less!</li>
-                                <li>Every day a new and important concept in animation.</li>
-                            </ul>
-                        </p>
-                        <p>
-                            This way of learning is meant to motivate people to stay and complete the course, without being overwhelmed by the amount of complexity that animation initially brings.
-                        </p>
-                        <p>
-                            At the same time, one has always a completed little animation that one can be proud of every single day.
-                        </p>
-                        <p>
-                            <a href="http://30dayanimator.com/">30dayanimator.com</a>
-                        </p>
+                        {{ project.description | markdown | safe }}
                     </div>
                     <div class="tags">
-                        <div class="tag d2">2D</div>
-                        <div class="tag motion-design">Motion Design</div>
-                        <div class="tag product">Product</div>
+                        {% for tag in project.tags %}
+                        <div class="tag {{ tag }}">{{ projects.tagMapping[tag] or tag }}</div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="project">
-            <img class="project-img" src="/img/work/2022-lavamachine.png" alt="Reincarnation Mall - Lavamachine Short Film">
-            <header>
-                <h3 class="project-title">Reincarnation Mall</h3>
-                <div class="date">2023 Jan-Feb</div>
-            </header>
-
-            <div class="additional-content">
-                <div class="interactive">
-                    <div class="img-hover">
-                        <img class="project-img" src="/img/work/2022-lavamachine.gif" alt="Reincarnation Mall - Lavamachine Short Film">
-                    </div>
-                    <header>
-                        <h3 class="project-title">Reincarnation Mall</h3>
-
-                        <div class="date">2023 Jan-Feb</div>
-                    </header>
-                    
-                    <div class="description">
-                        <p>
-                            I had the exciting opportunity to animate a 30-second scene for the short film of <a href="https://lavamachine.com/">LAVAMACHINE</a>, a studio I deeply admire for their creative output in the VR animation space. 
-                            
-                        </p>
-                        <p>
-                            The animation was officially produced by <a href="https://www.meta.com/quest/?utm_source=lavamachine.com&utm_medium=oculusredirect">META</a> to promote their VR headset brand and its capabilities.
-                        </p>
-                        <p>
-                            <a href="https://www.oculus.com/experiences/media/861868095081198/">view short film</a>
-                        </p>
-                    </div>
-                    <div class="tags">
-                        <div class="tag d3">3D</div>
-                        <div class="tag vr">VR</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project">
-            <img class="project-img" src="/img/work/2022-paradime.png" alt="Paradime.io - The OS for Analytics (Explainer)">
-            <header>
-                <h3 class="project-title">Paradime.io - Brand Video</h3>
-                <div class="date">2022 Oct-Nov</div>
-            </header>
-
-            <div class="additional-content">
-                <div class="interactive">
-                    <div class="img-hover">
-                        <img class="project-img" src="/img/work/2022-paradime.gif" alt="Paradime.io - The OS for Analytics (Explainer)">
-                    </div>
-                    <header>
-                        <h3 class="project-title">Paradime.io - Brand Video</h3>
-                        
-                        <div class="date">2022 Oct-Nov</div>
-                    </header>
-                    
-                    <div class="description">
-                        <p>
-                            <a href="https://vimeo.com/785724246">view animation</a>
-                        </p>
-                        <p>
-                            Paradime is a data and analytics platform. They approached me for their upcoming ProductHunt launch to produce a video to explain the problem their platform is solving. It's a dramatic and cheeky video explaining the everyday struggles of people working with an increasingly complex data analytics tech stack.
-                        </p>
-                        <p>
-                            For this project I coordinated the entire production, from the first ideations to the final delivery of the finished project. First we created visual ideas in a brainstorming session, which then were turned into thumbnail sketches and then arranged into a storyboard. Then a rough animatic was created based on the storyboard and when that was approved I went on to create the final animation, hired a voice artist, and did the final sound design and mixing.
-                        </p>
-                        <p>
-                            The project had a pretty tight schedule and was completed in only 6 weeks from start to finish. A great achievement considering the complexity of many of the scenes in the animation!
-                        </p>
-                        <p>
-                            I wrote about the creation of one of the most complex scenes here: 
-                            <br>
-                            <a href="https://medium.com/the-inspired-animator/how-i-made-this-complex-animation-133269cf70f">How I Made This Complex Animation (Medium Article)</a>.
-                        </p>
-
-                    </div>
-                    <div class="tags">
-                        <div class="tag d2">2D</div>
-                        <div class="tag motion-design">Motion Design</div>
-                        <div class="tag sound-design">Sound Design</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project">
-            <img class="project-img" src="/img/work/2022-pumping-iron.jpg" alt="Pumping Iron">
-            <header>
-                <h3 class="project-title">Pumping Iron</h3>
-                
-                <div class="date">2022 August</div>
-            </header>
-
-            <div class="additional-content">
-                <div class="interactive">
-                    <div class="img-hover">
-                        <img class="project-img" src="/img/work/2022-pumping-iron.gif" alt="Pumping Iron">
-                    </div>
-                    <header>
-                        <h3 class="project-title">Pumping Iron</h3>
-                        
-                        <div class="date">2022 August</div>
-                    </header>
-                    
-                    <div class="description">
-                        <p>
-                            A short animation created with the VR software Quill and rendered in Blender. The project
-                            was a proof of concept to test the entire rendering pipeline of an animation from Quill to
-                            Blender and figure out stumbling blocks before attempting even bigger animations.
-                        </p>
-                        <p>
-                            <a href="https://www.youtube.com/watch?v=p2WGUmQIsKc">view animation</a>
-                        </p>
-                    </div>
-                    <div class="tags">
-                        <div class="tag d3">3D</div>
-                        <div class="tag vr">VR</div>
-                        <div class="tag sound-design">Sound Design</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project">
-            <img class="project-img" src="/img/work/2022-levity.jpg" alt="Project Name Picture">
-            <header>
-                <h3 class="project-title">Levity Product Trailer</h3>
-                
-                <div class="date">2022 March</div>
-            </header>
-            <div class="additional-content">
-                <div class="interactive">
-
-
-                    <div class="img-hover">
-                        <img class="project-img" src="/img/work/2022-levity.gif" alt="Project Name Picture">
-                    </div>
-                    <header>
-                        <h3 class="project-title">Levity Product Trailer</h3>
-                        
-                        <div class="date">2022 March</div>
-                    </header>
-                    
-                    <div class="description">
-                        <p>
-                            <a href="https://vimeo.com/722503171">view product trailer</a><br>
-                        </p>
-                        <p>
-                            An animation introducing the Levity AI platform in an exciting way. This project was
-                            animated from the earliest storyboard to the final delivery of the trailer.
-                        </p>
-                        <p>
-                            Combined 2D and 3D motion design with hand-painted frame-by-frame animation techniques were
-                            used to create an exciting and fast-paced tour through the platforms main features.
-                        </p>
-                    </div>
-                    <div class="tags">
-                        <div class="tag d2">2D</div>
-                        <div class="tag d3">3D</div>
-                        <div class="tag motion-design">Motion Design</div>
-                        <div class="tag sound-design">Sound Design</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project">
-            <img class="project-img" src="/img/work/2022-xocolatl.jpg" alt="Project Name Picture">
-            <header>
-                <h3 class="project-title">Xocolatl Illustrations</h3>
-                
-                <div class="date">2022 February</div>
-            </header>
-            <div class="additional-content">
-                <div class="interactive">
-
-
-                    <div class="img-hover">
-                        <img class="project-img" src="/img/work/2022-xocolatl.gif" alt="Project Name Picture">
-                    </div>
-                    <header>
-                        <h3 class="project-title">Xocolatl Illustrations</h3>
-                        
-                        <div class="date">2022 February</div>
-                    </header>
-                    
-                    <div class="description">
-                        A series of illustrations of ancient American civilizations. The warrior, the citizen and the
-                        shaman. Created for the Xocolatl Web3 project as three different tiers to contribute to the
-                        project.
-                        <p>
-                            <a href="https://www.artstation.com/artwork/QnVEgB">view illustrations</a>
-                        </p>
-                    </div>
-                    <div class="tags">
-                        <div class="tag illustration">illustration</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project">
-            <img class="project-img" src="/img/work/2022-vr-showreel.jpg" alt="VR Showreel">
-            <header>
-                <h3 class="project-title">Quill VR Shorts</h3>
-                
-                <div class="date">2021 - 2022</div>
-            </header>
-            <div class="additional-content">
-                <div class="interactive">
-
-
-                    <div class="img-hover">
-                        <img class="project-img" src="/img/work/2022-vr-showreel.gif" alt="VR Showreel">
-                    </div>
-                    <header>
-                        <h3 class="project-title">Quill VR Shorts</h3>
-                        
-                        <div class="date">2021 - 2022</div>
-                    </header>
-                    
-                    <div class="description">
-                        Exploring the new medium and creative possibilities of animating in VR.
-                        <p>
-                            <a href="https://vimeo.com/724798042">view showreel</a>
-                        </p>
-                    </div>
-                    <div class="tags">
-                        <div class="tag d3">3D</div>
-                        <div class="tag vr">VR</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project">
-            <img class="project-img" src="/img/work/2021-fly-asleep.jpg" alt="Fly Asleep Concept Ad Screenshot">
-            <header>
-                <h3 class="project-title">Fly Asleep - Concept Ad</h3>
-                
-                <div class="date">2021 December </div>
-            </header>
-            <div class="additional-content">
-                <div class="interactive">
-
-
-                    <div class="img-hover">
-                        <img class="project-img" src="/img/work/2021-fly-asleep.gif" alt="Fly Asleep Concept Ad Screenshot">
-                    </div>
-                    <header>
-                        <h3 class="project-title">Fly Asleep - Concept Ad</h3>
-                        
-                        <div class="date">2021 December</div>
-                    </header>
-                    
-                    <div class="description">
-                        <p>
-                            In this project I wanted to challenge myself to create a "satisfying" animation with Blender with the use of physics, slow motion and different material settings. 
-                        </p>
-                        <p>
-                            I came up with this simple concept ad for pillows. That are so comfy that you would "Fly Asleep" instead of just falling. I did not only the animation, but also the sound design and music for it.
-                        </p>
-                        <p>
-                            <a href="https://youtu.be/ZqYWGE9DvaA">view video</a>
-                        </p>
-                    </div>
-                    <div class="tags">
-                        <div class="tag d3">3D</div>
-                        <div class="tag motion-design">Motion Design</div>
-                        <div class="tag sound-design">Sound Design</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project">
-            <img class="project-img" src="/img/work/2022-ae-plugins.jpg" alt="AE Plugins & Presets">
-            <header>
-                <h3 class="project-title">AE Plugins & Presets</h3>
-                
-                <div class="date">2020 - 2022</div>
-            </header>
-            <div class="additional-content">
-                <div class="interactive">
-
-
-                    <div class="img-hover">
-                        <img class="project-img" src="/img/work/2022-ae-plugins.jpg" alt="AE Plugins & Presets">
-                    </div>
-                    <header>
-                        <h3 class="project-title">AE Plugins & Presets</h3>
-                        
-                        <div class="date">2020 - 2022</div>
-                    </header>
-                    
-                    <div class="description">
-                        <p>
-                            Working with After Effects has many inefficiencies. It's a great tool, but not perfect.
-                            Tackling these problems I started creating plugins and presets and selling them on my store.
-                            For marketing purposes I produced multiple trailers and advertised on various channels.
-                        </p>
-                        <p>
-                            Examples include: <br>
-                            <b>EasyLoop</b>, a plugin that allows looping with the click of a single button.<br>
-                            <b>VHS IT</b>, a plugin to recreate a VHS look on your footage. <br>
-                            <b>Handcrafted Look</b>, a preset that makes your footage look hand-animated.
-                        </p>
-                        <p>
-                            <a href="https://justgoscha.gumroad.com/?tags=after+effects">view all plugins</a>
-                        </p>
-                    </div>
-                    <div class="tags">
-                        <div class="tag d2">2D</div>
-                        <div class="tag motion-design">Motion Design</div>
-                        <div class="tag product">Product</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project">
-            <img class="project-img" src="/img/work/2021-future-park.jpg" alt="Future Park 2050">
-            <header>
-                <h3 class="project-title">Futurepark 2050</h3>
-                
-                <div class="date">2021 July</div>
-            </header>
-            <div class="additional-content">
-                <div class="interactive">
-
-
-                    <div class="img-hover">
-                        <img class="project-img" src="/img/work/2021-future-park.jpg" alt="Future Park 2050">
-                    </div>
-                    <header>
-                        <h3 class="project-title">Futurepark 2050</h3>
-                        
-                        <div class="date">2021 July</div>
-                    </header>
-                    
-                    <div class="description">
-                        <p>
-                            For <b>The Future Game 2050</b> I animated an illustration (by Johannes Fuchs) of a
-                            futuristic park.
-                        </p>
-                        <p>
-                            We were using web technologies like SVG and Lottie to bring the animation to life. With my
-                            tech expertise in Web Development I was consulting on the best solutions to implement the
-                            animation in an efficient manner.
-                        </p>
-                    </div>
-                    <div class="tags">
-                        <div class="tag d2">2D</div>
-                        <div class="tag motion-design">Motion Design</div>
-                        <div class="tag ui-ux">UI/UX</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project">
-            <img class="project-img" src="/img/work/2021-serene-scenes.jpg" alt="Serene Scenes SVG Illustrations">
-            <header>
-                <h3 class="project-title">Serene Scenes SVGs</h3>
-                
-                <div class="date">2021 June</div>
-            </header>
-            <div class="additional-content">
-                <div class="interactive">
-
-
-                    <div class="img-hover">
-                        <img class="project-img" src="/img/work/2021-serene-scenes.jpg"
-                            alt="Serene Scenes SVG Illustrations">
-                    </div>
-                    <header>
-                        <h3 class="project-title">Serene Scenes SVGs</h3>
-                        
-                        <div class="date">2021 June</div>
-                    </header>
-                    
-                    <div class="description">
-                        <p>
-                            To learn to create beautiful background illustrations and vector graphics I started a
-                            project to draw daily landscape sceneries.
-                        </p>
-                        <p>
-                            What came out was not only a set of beautiful illustrations, but also a illustration library
-                            product for others to buy and use.
-                        </p>
-                        <p>
-                            <a href="https://www.producthunt.com/posts/serene-scenes-illustrations-pack">link to project</a>
-                        </p>
-                    </div>
-                    <div class="tags">
-                        <div class="tag illustration">illustration</div>
-                        <div class="tag product">product</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project">
-            <img class="project-img" src="/img/work/2021-afilio.jpg" alt="Afilio Here Animation">
-            <header>
-                <h3 class="project-title">Afilio Hero Animation</h3>
-                
-                <div class="date">2021 February</div>
-            </header>
-            <div class="additional-content">
-                <div class="interactive">
-
-
-                    <div class="img-hover">
-                        <img class="project-img" src="/img/work/2021-afilio.gif" alt="Afilio Here Animation">
-                    </div>
-                    <header>
-                        <h3 class="project-title">Afilio Hero Animation</h3>
-                        
-                        <div class="date">2021 February</div>
-                    </header>
-
-                    <div class="description">
-                        <p>
-                            Afilio's website has nice illustrations, but it felt a little bit static. To get people even
-                            more engaged with the topic of insurances, we decided to collaborate to create an animated
-                            hero video to play in the background and replace the hero illustration.
-                        </p>
-                        <p>
-                            The challenge was to create something that is not too distracting and would overtake the
-                            entire design, but it should still allow you to linger on the animation and see the subtle
-                            story unfold. The story being a lifetime in timelapse of a woman from college to retirement.
-                        </p>
-                        <p>
-                            <a href="https://www.afilio.de/">see it in action</a>
-                        </p>
-                    </div>
-                    <div class="tags">
-                        <div class="tag d2">2D</div>
-                        <div class="tag motion-design">Motion Design</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project">
-            <img class="project-img" src="/img/work/2020-last-today.jpg" alt="The Last Today Short Film">
-            <header>
-                <h3 class="project-title">The Last Today</h3>
-                
-                <div class="date">2021</div>
-            </header>
-            <div class="additional-content">
-                <div class="interactive">
-                    <div class="img-hover">
-                        <img class="project-img" src="/img/work/2020-last-today.gif" alt="The Last Today Short Film">
-                    </div>
-                    <header>
-                        <h3 class="project-title">The Last Today</h3>
-                        
-                        <div class="date">2021</div>
-                    </header>
-
-                    <div class="description">
-                        <p>
-                            Animation of a 30-second car crash scene for the short film <b>The Last Today</b>. Mixing of
-                            3D elements into a completely frame-by-frame animated scene.
-                        </p>
-
-                        <p>
-                            Complete creative control over the execution of the scene
-                        </p>
-                        <p>
-                            <a href="https://twitter.com/justgoscha/status/1553009697556500480">view making of</a>
-                        </p>
-                    </div>
-                    <div class="tags">
-                        <div class="tag d2">2D</div>
-                        <div class="tag d3">3d</div>
-                        <div class="tag motion-design">Motion Design</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project">
-            <img class="project-img" src="/img/work/2020-pseudora.jpg" alt="PseudoRa Video Loops">
-            <header>
-                <h3 class="project-title">PseudoRa Video Loops</h3>
-                
-                <div class="date">2020 - 2021</div>
-            </header>
-            <div class="additional-content">
-                <div class="interactive">
-
-
-                    <div class="img-hover">
-                        <img class="project-img" src="/img/work/2020-pseudora.jpg" alt="PseudoRa Video Loops">
-                    </div>
-                    <header>
-                        <h3 class="project-title">PseudoRa Video Loops</h3>
-                        
-                        <div class="date">2020 - 2021</div>
-                    </header>
-                    
-                    <div class="description">
-                        I was commissioned to create two animation loops of backgrounds matching the vibe of the music
-                        of up and coming Jazz & Rap artist PseudoRa. What came out are two great pieces that capture a
-                        great nostalgic mood in modern times.
-                        <p>
-                            <a href="https://www.instagram.com/p/CL9tHDQigdH/">view PseudoRa - Berlin</a><br>
-                            <a href="https://www.instagram.com/p/CB-UBSoqrx6/">view PseudoRa - Miami</a>
-                        </p>
-                    </div>
-                    <div class="tags">
-                        <div class="tag d2">2D</div>
-                        <div class="tag motion-design">Motion Design</div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project">
-            <img class="project-img" src="/img/work/2020-fortox explainer.png" alt="Forto Customer Journey">
-            <header>
-                <h3 class="project-title">FortoX - Explainer</h3>
-
-                <div class="date">2020</div>
-            </header>
-            <div class="additional-content">
-                <div class="interactive">
-
-
-                    <div class="img-hover">
-                        <img class="project-img" src="/img/work/2020-fortox explainer.png" alt="Forto Customer Journey">
-                    </div>
-                    <header>
-                        <h3 class="project-title">FortoX - Explainer</h3>
-                        
-                        <div class="date">2020</div>
-                    </header>
-                    
-                    <div class="description">
-                        <p>
-                            Assisting with animation and asset creation for the FortoX explainer video.
-                        </p>
-                        <p>
-                            <a href="https://www.facebook.com/watch/?v=440421150264841">watch FortoX - Explainer Video</a>
-                        </p>
-                    </div>
-                    <div class="tags">
-                        <div class="tag illustration">illustration</div>
-                        <div class="tag motion-design">Motion Design</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project">
-            <img class="project-img" src="/img/work/2020-forto-customer-journey.jpg" alt="Forto Customer Journey">
-            <header>
-                <h3 class="project-title">Forto - Customer Journey</h3>
-
-                <div class="date">2020</div>
-            </header>
-            <div class="additional-content">
-                <div class="interactive">
-
-
-                    <div class="img-hover">
-                        <img class="project-img" src="/img/work/2020-forto-customer-journey.gif" alt="Forto Customer Journey">
-                    </div>
-                    <header>
-                        <h3 class="project-title">Forto - Customer Journey</h3>
-                        
-                        <div class="date">2020</div>
-                    </header>
-                    
-                    <div class="description">
-                        Illustrating a customer journey for a new product of Forto, involving 8 different steps in the journey with each having its own illustration.
-                    </div>
-                    <div class="tags">
-                        <div class="tag illustration">illustration</div>
-                        <div class="tag ui-ux">UI/UX</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project">
-            <img class="project-img" src="/img/work/2019-spaceship.jpg" alt="Moebius Inspired Animation">
-            <header>
-                <h3 class="project-title">Moebius Inspired Short</h3>
-                
-                <div class="date">2019 Oct</div>
-            </header>
-            <div class="additional-content">
-                <div class="interactive">
-
-
-                    <div class="img-hover">
-                        <img class="project-img" src="/img/work/2019-spaceship.gif" alt="Moebius Inspired Animation">
-                    </div>
-                    <header>
-                        <h3 class="project-title">Moebius Inspired Short</h3>
-                        
-                        <div class="date">2019 Oct</div>
-                    </header>
-                    
-                    <div class="description">
-                        A private commission to create an animation inspired by a Moebius-style illustration.
-                        <p>
-                            <a href="https://www.reddit.com/r/animation/comments/g7u1ft/i_created_a_little_making_of_for_first_client/">view animation</a>
-                        </p>
-                    </div>
-                    <div class="tags">
-                        <div class="tag d2">2D</div>
-                        <div class="tag sound-design">Sound Design</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project">
-            <img class="project-img" src="/img/work/100d.jpg" alt="100 Days of Walk Cycle Cover">
-            <header>
-                <h3 class="project-title">100 Days of Walk Cycles</h3>
-                
-                <div class="date">2016 March</div>
-            </header>
-            <div class="additional-content">
-                <div class="interactive">
-
-
-                    <div class="img-hover">
-                        <img class="project-img" src="/img/work/100d.jpg" alt="100 Days of Walk Cycle Cover">
-                    </div>
-                    <header>
-                        <h3 class="project-title">100 Days of Walk Cycles</h3>
-                        
-                        <div class="date">2016 March</div>
-                    </header>
-                    
-                    <div class="description">
-                        <p>
-                            To accelerate my learning of animation I decided to challenge myself to create 100 different
-                            walk cycles on 100 consecutive days.
-                        </p>
-                        <p>
-                            From that experience came also a first short film that compiled all the cycles into a single video. I wrote an article about my experience of attempting the challenge and overnight it became an instant internet success and gathered over 50,000 views.
-                        </p>
-                        <p>
-                            <a href="https://vimeo.com/160298199">view video</a><br>
-                            <a href="https://medium.com/the-inspired-animator/100daysofwalkcycles-134ae1ca91ac#.c3so76uio">read full story</a>
-
-                        </p>
-                    </div>
-                    <div class="tags">
-                        <div class="tag d2">2D</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        {% endfor %}
     </section>
 </section>

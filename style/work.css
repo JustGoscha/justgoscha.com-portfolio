@@ -15,6 +15,11 @@
     font-size: 0.816em;
 }
 
+.motion-design {
+    padding: 2em 2em 0 2em;
+    text-align: center;
+}
+
 p {
     margin: 1em 0;
 }
@@ -28,6 +33,102 @@ p {
 .work {
     color: var(--primary-text);
     background-color: var(--grey-200);
+}
+
+.cv>h2{
+    text-align: center;
+    padding-top: 1em;
+    margin: 1.5em 0 1em;
+}
+
+.cv {
+    color: var(--primary-text);
+    background-color: var(--grey-200);
+    padding-bottom: 3em;
+}
+
+.work-table {
+    margin: auto;
+    width: 80vw;
+
+    max-width: 1280px;
+    min-width: 960px;
+}
+
+.work-item {
+    
+    margin-bottom: 1em;
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--grey-100);
+}
+.work-item .additional-content {
+    display: block;
+    background: linear-gradient(180deg, var(--grey-100) 20%, rgba(15, 205, 239, 0.15) 70%, rgba(105, 235, 149, 0.2) 100%);
+    height: 100%;
+    color: var(--primary-text);
+    border-left: 1px solid var(--seperator-color);
+    padding: 0 var(--spacing-2x) var(--spacing-2x);
+}
+
+.general-info {
+    padding: var(--spacing) var(--spacing) 0 var(--spacing);
+}
+.work-item header {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.work-item .date {
+    font-size: .8em;
+    font-weight: 400;
+    color: var(--hint-text);
+}
+
+
+.work-img {
+    display: block;
+    object-fit: cover;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.position-title {
+    font-size: 0.875em;
+    font-weight: 400;
+    color: var(--secondary-text);
+}
+
+.achievements h5 {
+    font-weight: 500;
+    margin-bottom: 0.5em;
+}
+
+.achievement {
+    position: relative;
+    overflow: visible;
+}
+.achievement .star {
+    font-size: 1.5em;
+}
+.achievement {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    position: relative;
+    font-size: 0.875em;
+    font-weight: 400;
+    color: var(--primary-text);
+    padding: 1em;
+    /* left: 1em;
+    margin-right: 1em; */
+    background: rgba(255,255,255,0.2);
+    /* linear-gradient(120deg, rgba(221, 255, 221, 0.5) 0%, rgba(191, 255, 209, 0.7) 100%); */
+    margin-bottom: 1em;
+    border-radius: 10px;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px -5px rgba(0, 0, 0, 0.1);
 }
 
 .project-grid {
@@ -227,6 +328,7 @@ p {
     background-color: var(--chip-8);
 }
 
+
 /* ------------- MOBILE LAST -------------- */
 
 @media only screen and (max-width: 960px) {
@@ -245,6 +347,31 @@ p {
     .project:hover .additional-content{
         margin: -5vw;
         padding: 5vw;
-    }        
+    }      
+    
+    .work-table {
+        width: 90vw;
+        max-width: 560px;
+        min-width: 0;
+    }
+
+    .work-item {
+        flex-direction: column;
+    }
+
+    .work-item header {
+        width: 100%;
+    }
+
+    .work-item .additional-content {
+        padding: var(--spacing);
+    }
+
+    .work-img {
+        width: 90vw;
+        height: 40vw;
+        max-height: 300px;
+        max-width: 100%;
+    }
 }
 

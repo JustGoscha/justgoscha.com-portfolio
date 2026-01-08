@@ -20,7 +20,9 @@ module.exports = () => {
         });
       })
       .catch((error) => {
-        reject(error);
+        // Return empty data instead of failing the build
+        console.warn("Could not fetch Medium posts, using empty data");
+        resolve({ url: url, posts: [] });
       });
   });
 };

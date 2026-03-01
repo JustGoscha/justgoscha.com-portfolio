@@ -8,18 +8,63 @@ css: /style/work.css
 
 <div class="intro">
     <h1>My Work</h1>
-    <p>Here is a collection of my past work and projects.</p>
+    <p>I love building things — from shipping products and leading engineering teams, to animating short films and creating tools for creatives. Here's a collection of the work I'm most proud of.</p>
 </div>
+
+<section class="side-projects">
+    <h2>Projects</h2>
+    <p>Things I'm building in my spare time.</p>
+
+    <section class="project-grid">
+        {% for project in projects.sideProjects %}
+        <div class="project">
+            <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
+                <img class="project-img" src="{{ project.static_image }}" alt="{{ project.title }}">
+                <header>
+                    <h3 class="project-title">{{ project.title }}</h3>
+                    <div class="date">{{ project.date }}</div>
+                </header>
+            </a>
+
+            <div class="additional-content">
+                <div class="interactive">
+                    <div class="img-hover">
+                        <img class="project-img" src="{{ project.static_image }}" alt="{{ project.title }}">
+                    </div>
+                    <header>
+                        <h3 class="project-title">{{ project.title }}</h3>
+                        <div class="date">{{ project.date }}</div>
+                    </header>
+
+                    <div class="description">
+                        {{ project.description | markdown | safe }}
+                    </div>
+                    <div class="tags">
+                        {% for tag in project.tags %}
+                        <div class="tag {{ tag }}">{{ projects.tagMapping[tag] or tag }}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+
+    <div class="more-link">
+        <a href="https://github.com/JustGoscha" target="_blank" rel="noopener noreferrer">More projects on GitHub &rarr;</a>
+    </div>
+</section>
 
 <section class="cv">
     <h2>Curriculum Vitae</h2>
+    <p>Where I worked and my impact there.</p>
     <section class="work-table">
         {% for work in projects.work %}
         <div class="work-item">
             <header>
                 <img class="work-img" src="{{ work.static_image }}" alt="{{ work.title }}">
                 <div class="general-info">
-                    <h3 class="company-title">{{ work.company }}</h3>
+                    <h3 class="company-title">{% if work.companyLink %}<a href="{{ work.companyLink }}" target="_blank" rel="noopener noreferrer">{{ work.company }}</a>{% else %}{{ work.company }}{% endif %}</h3>
                     <div class="position-title">{{ work.position }}</div>
                     <div class="date">{{ work.from.slice(0,7) }} - {{ work.to.slice(0,7) }}</div>
                 </div>

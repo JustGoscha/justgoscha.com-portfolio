@@ -6,7 +6,12 @@ const tagMapping = {
   "sound-design": "Sound Design",
   "product": "Product",
   "illustration": "illustration",
-  "ui-ux": "UI/UX"
+  "ui-ux": "UI/UX",
+  "ai": "AI",
+  "saas": "SaaS",
+  "dev-tools": "Dev Tools",
+  "creative": "Creative",
+  "open-source": "Open Source"
 };
 
 const skills = [
@@ -122,6 +127,7 @@ const work = [
   },
   {
     "company": "Oximity GmbH",
+    "companyLink": "https://web.archive.org/web/2016/https://www.oximity.com/",
     "position": "Front-End Engineer",
     "from": "2014-05-01",
     "to": "2016-03-31",
@@ -144,6 +150,7 @@ const work = [
   },
   {
     "company": "Fraunhofer FOKUS",
+    "companyLink": "https://www.fokus.fraunhofer.de",
     "position": "Full-Stack Engineer (Working Student)",
     "from": "2010-12-01",
     "to": "2014-04-30",
@@ -379,8 +386,60 @@ From that experience came also a first short film that compiled all the cycles i
   }
 ];
 
+const sideProjects = [
+  {
+    "title": "ZenMemo",
+    "date": "2024 - present",
+    "static_image": "/img/work/projects/zenmemo.jpg",
+    "url": "https://zenmemo.app/",
+    "description": "A whole operating system for your life. I built ZenMemo because I was tired of juggling scattered notes, to-do apps, and journaling tools. With AI-powered audio journaling, it captures your thoughts naturally, organizes tasks, surfaces insights, and helps you take back control over your day.\n\n[visit project](https://zenmemo.app/)",
+    "tags": ["ai", "saas"]
+  },
+  {
+    "title": "Doodely",
+    "date": "2025",
+    "static_image": "/img/work/projects/doodely.jpg",
+    "url": "https://doodely.justgoscha.com/",
+    "description": "The easiest way to animate handwriting. After years of painstakingly animating handwritten text frame-by-frame in After Effects, I built the tool I always wanted. Just draw, and Doodely records and plays back your strokes as smooth animations. Export as PNG sequence or video.\n\n[visit project](https://doodely.justgoscha.com/)",
+    "tags": ["creative"]
+  },
+  {
+    "title": "FinLogos",
+    "date": "2026",
+    "static_image": "/img/work/projects/finlogos.jpg",
+    "url": "https://finlogos.justgoscha.com/",
+    "description": "Advanced financial intelligence tools have long been locked behind institutional walls — available to hedge funds, but not to everyday investors. FinLogos democratizes this by bringing AI-powered research, hypothesis tracking, and portfolio analysis to individual investors. Research smarter, validate your predictions with data, and discover hidden opportunities.\n\n[visit project](https://finlogos.justgoscha.com/)",
+    "tags": ["ai", "saas"]
+  },
+  {
+    "title": "OMGBrush",
+    "date": "2023 - present",
+    "static_image": "/img/work/projects/omgbrush.jpg",
+    "url": "https://animator.substack.com/p/bringing-3d-drawing-to-the-ipad",
+    "description": "Professional 3D tools on iPad exist, but they lack the simplicity and immediacy that makes drawing on iPad so appealing. OMGBrush brings 3D drawing to the iPad with a handmade aesthetic — fun, explorative, and expressive like a traditional art tool. Simple to pick up, yet powerful. Inspired by Blender's GreasePencil and QuillVR.\n\n[read article](https://animator.substack.com/p/bringing-3d-drawing-to-the-ipad)",
+    "tags": ["creative", "d3"]
+  },
+  {
+    "title": "ZenTest",
+    "date": "2025",
+    "static_image": "/img/work/projects/zentest.jpg",
+    "url": "https://github.com/JustGoscha/zentest",
+    "description": "E2E tests are always flaky. They break, get ignored, and nobody wants to maintain them. ZenTest solves this by completely decoupling end-to-end testing from your app. Tests are written in plain English, so even non-technical people can create them. An agentic AI tester drives the browser like a human — clicking buttons, typing, reacting to what it sees. Tests are self-healing, so they don't break when your UI changes.\n\n[view on GitHub](https://github.com/JustGoscha/zentest)",
+    "tags": ["ai", "dev-tools", "open-source"]
+  },
+  {
+    "title": "MeepleOS",
+    "date": "2025",
+    "static_image": "/img/work/projects/meepleos.jpg",
+    "url": "https://justgoscha.github.io/meepleOS/",
+    "description": "Performance reviews are often unstructured and not that helpful. MeepleOS addresses this by evaluating people across multiple dimensions — because nobody is just awesome or terrible. People excel in certain areas and struggle in others. MeepleOS tells them where they shine and where they can improve, gamifying the process to make it more engaging and actionable.\n\n[visit project](https://justgoscha.github.io/meepleOS/)",
+    "tags": ["ai", "saas"]
+  }
+];
+
 module.exports = {
   work,
   projects,
+  sideProjects,
   tagMapping
 };

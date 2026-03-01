@@ -53,6 +53,11 @@
   --chip-7: #9153DF;
   --chip-8: #c9598d;
 
+  --chip-9: #7C3AED;   /* AI */
+  --chip-10: #0EA5E9;  /* SaaS */
+  --chip-11: #F59E0B;  /* Dev Tools */
+  --chip-12: #EC4899;  /* Creative */
+  --chip-13: #10B981;  /* Open Source */
 }
 
 html {

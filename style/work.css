@@ -8,6 +8,9 @@
 }
 .intro{
     text-align: center;
+    max-width: 640px;
+    margin: auto;
+    padding: 0 1em;
 }
 
 .intro p {
@@ -37,14 +40,20 @@ p {
 
 .cv>h2{
     text-align: center;
-    padding-top: 1em;
-    margin: 1.5em 0 1em;
+    padding-top: 2em;
+    margin: 0 0 1em;
 }
 
 .cv {
     color: var(--primary-text);
     background-color: var(--grey-200);
     padding-bottom: 3em;
+}
+
+.cv > p,
+.side-projects > p {
+    text-align: center;
+    color: var(--secondary-text);
 }
 
 .work-table {
@@ -73,6 +82,16 @@ p {
 
 .general-info {
     padding: var(--spacing) var(--spacing) 0 var(--spacing);
+}
+
+.company-title a {
+    color: var(--primary-text);
+    text-decoration: none;
+    border-bottom: none;
+    transition: 0.3s color;
+}
+.company-title a:hover {
+    color: var(--link-color);
 }
 .work-item header {
     width: 300px;
@@ -328,6 +347,66 @@ p {
     background-color: var(--chip-8);
 }
 
+.tag.ai {
+    background-color: var(--chip-9);
+}
+.tag.saas {
+    background-color: var(--chip-10);
+}
+.tag.dev-tools {
+    background-color: var(--chip-11);
+}
+.tag.creative {
+    background-color: var(--chip-12);
+}
+.tag.open-source {
+    background-color: var(--chip-13);
+}
+
+
+/* ------------- SIDE PROJECTS -------------- */
+
+.side-projects {
+    color: var(--primary-text);
+    background-color: var(--grey-200);
+    padding-bottom: 3em;
+}
+
+.side-projects .more-link {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 0.875em;
+}
+
+.side-projects .more-link a {
+    color: var(--secondary-text);
+    text-decoration: none;
+    transition: 0.3s color;
+}
+
+.side-projects .more-link a:hover {
+    color: var(--link-color);
+}
+
+.side-projects > h2 {
+    text-align: center;
+    padding-top: 1em;
+    margin: 1.5em 0 1em;
+}
+
+.side-projects .project > a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.side-projects .project-img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
 
 /* ------------- MOBILE LAST -------------- */
 

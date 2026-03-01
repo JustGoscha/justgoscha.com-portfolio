@@ -72,12 +72,18 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.pub-name {
+a.pub-name {
   font-size: 0.65em;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--primary-text-light);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a.pub-name:hover {
+  color: var(--secondary-200);
 }
 
 .pub-badge {
@@ -316,18 +322,6 @@
   font-size: 0.48em;
 }
 
-/* ── Details / Summary (accordion) ── */
-.pub-box details summary {
-  cursor: default;
-  list-style: none;
-}
-
-.pub-box details summary::-webkit-details-marker,
-.pub-box details summary::marker {
-  display: none;
-  content: "";
-}
-
 /* ── No posts fallback ── */
 .no-posts {
   font-size: 0.65em;
@@ -352,26 +346,6 @@
   .pub-box {
     border-right: none;
     padding: 1.1em var(--spacing) 1.3em;
-  }
-
-  /* Enable accordion on mobile */
-  .pub-box details summary {
-    cursor: pointer;
-    list-style: disc;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .pub-box details summary::after {
-    content: "▸";
-    font-size: 0.7em;
-    transition: transform 0.2s;
-    color: var(--hint-text-light);
-  }
-
-  .pub-box details[open] summary::after {
-    transform: rotate(90deg);
   }
 
   .short-card {

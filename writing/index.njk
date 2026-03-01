@@ -15,159 +15,135 @@ css: /style/writing.css
   {# ── Row 1: Inspired Animator (2 cols) + YouTube Videos (2 cols) ── #}
   {% set primarySub = writing.substacks[0] %}
   <div class="pub-box span-2">
-    <details open>
-      <summary>
-        <div class="pub-header">
-          <span class="pub-name">{{ primarySub.name }}</span>
-          <span class="pub-badge badge-substack">Substack</span>
-        </div>
-      </summary>
-      {% if primarySub.posts.length %}
-      <ul class="article-list">
-        {% for post in primarySub.posts.slice(0, 6) %}
-        <li{% if loop.first %} class="featured"{% endif %}>
-          <a href="{{ post.link }}" target="_blank" rel="noopener">{{ post.title }}</a>
-          {% if loop.first and post.description %}
-          <div class="excerpt">{{ post.description }}</div>
-          {% endif %}
-          <div class="article-date">{{ post.pubDate | date }}</div>
-        </li>
-        {% endfor %}
-      </ul>
-      {% else %}
-      <p class="no-posts">No posts available.</p>
-      {% endif %}
-      <a class="read-all" href="{{ primarySub.homeUrl }}" target="_blank" rel="noopener">Read all &rarr;</a>
-    </details>
+    <div class="pub-header">
+      <a class="pub-name" href="{{ primarySub.homeUrl }}" target="_blank" rel="noopener">{{ primarySub.name }}</a>
+      <span class="pub-badge badge-substack">Substack</span>
+    </div>
+    {% if primarySub.posts.length %}
+    <ul class="article-list">
+      {% for post in primarySub.posts.slice(0, 6) %}
+      <li{% if loop.first %} class="featured"{% endif %}>
+        <a href="{{ post.link }}" target="_blank" rel="noopener">{{ post.title }}</a>
+        {% if loop.first and post.description %}
+        <div class="excerpt">{{ post.description }}</div>
+        {% endif %}
+        <div class="article-date">{{ post.pubDate | date }}</div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="no-posts">No posts available.</p>
+    {% endif %}
+    <a class="read-all" href="{{ primarySub.homeUrl }}" target="_blank" rel="noopener">Read all &rarr;</a>
   </div>
 
   <div class="pub-box span-2">
-    <details open>
-      <summary>
-        <div class="pub-header">
-          <span class="pub-name">YouTube</span>
-          <span class="pub-badge badge-video">Video</span>
+    <div class="pub-header">
+      <a class="pub-name" href="{{ writing.youtube.homeUrl }}" target="_blank" rel="noopener">YouTube</a>
+      <span class="pub-badge badge-video">Video</span>
+    </div>
+    {% if writing.youtube.videos.length %}
+    <ul class="video-list">
+      {% for vid in writing.youtube.videos.slice(0, 5) %}
+      <li>
+        <img class="video-thumb" src="{{ vid.thumbnail }}" alt="{{ vid.title }}" loading="lazy">
+        <div class="video-info">
+          <a href="{{ vid.link }}" target="_blank" rel="noopener">{{ vid.title }}</a>
+          <div class="article-date">{{ vid.pubDate | date }}</div>
         </div>
-      </summary>
-      {% if writing.youtube.videos.length %}
-      <ul class="video-list">
-        {% for vid in writing.youtube.videos.slice(0, 5) %}
-        <li>
-          <img class="video-thumb" src="{{ vid.thumbnail }}" alt="{{ vid.title }}" loading="lazy">
-          <div class="video-info">
-            <a href="{{ vid.link }}" target="_blank" rel="noopener">{{ vid.title }}</a>
-            <div class="article-date">{{ vid.pubDate | date }}</div>
-          </div>
-        </li>
-        {% endfor %}
-      </ul>
-      {% else %}
-      <p class="no-posts">No videos available.</p>
-      {% endif %}
-      <a class="read-all" href="{{ writing.youtube.homeUrl }}" target="_blank" rel="noopener">Watch all &rarr;</a>
-    </details>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="no-posts">No videos available.</p>
+    {% endif %}
+    <a class="read-all" href="{{ writing.youtube.homeUrl }}" target="_blank" rel="noopener">Watch all &rarr;</a>
   </div>
 
   {# ── Row 2: Pain Meds (2 cols) + ZenMemo (1 col) + Technograf (1 col) ── #}
   {% set secondSub = writing.substacks[1] %}
   <div class="pub-box span-2">
-    <details open>
-      <summary>
-        <div class="pub-header">
-          <span class="pub-name">{{ secondSub.name }}</span>
-          <span class="pub-badge badge-substack">Substack</span>
-        </div>
-      </summary>
-      {% if secondSub.posts.length %}
-      <ul class="article-list">
-        {% for post in secondSub.posts.slice(0, 6) %}
-        <li{% if loop.first %} class="featured"{% endif %}>
-          <a href="{{ post.link }}" target="_blank" rel="noopener">{{ post.title }}</a>
-          {% if loop.first and post.description %}
-          <div class="excerpt">{{ post.description }}</div>
-          {% endif %}
-          <div class="article-date">{{ post.pubDate | date }}</div>
-        </li>
-        {% endfor %}
-      </ul>
-      {% else %}
-      <p class="no-posts">No posts available.</p>
-      {% endif %}
-      <a class="read-all" href="{{ secondSub.homeUrl }}" target="_blank" rel="noopener">Read all &rarr;</a>
-    </details>
+    <div class="pub-header">
+      <a class="pub-name" href="{{ secondSub.homeUrl }}" target="_blank" rel="noopener">{{ secondSub.name }}</a>
+      <span class="pub-badge badge-substack">Substack</span>
+    </div>
+    {% if secondSub.posts.length %}
+    <ul class="article-list">
+      {% for post in secondSub.posts.slice(0, 6) %}
+      <li{% if loop.first %} class="featured"{% endif %}>
+        <a href="{{ post.link }}" target="_blank" rel="noopener">{{ post.title }}</a>
+        {% if loop.first and post.description %}
+        <div class="excerpt">{{ post.description }}</div>
+        {% endif %}
+        <div class="article-date">{{ post.pubDate | date }}</div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="no-posts">No posts available.</p>
+    {% endif %}
+    <a class="read-all" href="{{ secondSub.homeUrl }}" target="_blank" rel="noopener">Read all &rarr;</a>
   </div>
 
   {% for sub in writing.substacks.slice(2, 4) %}
   <div class="pub-box">
-    <details open>
-      <summary>
-        <div class="pub-header">
-          <span class="pub-name">{{ sub.name }}</span>
-          <span class="pub-badge badge-substack">Substack</span>
-        </div>
-      </summary>
-      {% if sub.posts.length %}
-      <ul class="article-list">
-        {% for post in sub.posts.slice(0, 5) %}
-        <li>
-          <a href="{{ post.link }}" target="_blank" rel="noopener">{{ post.title }}</a>
-          <div class="article-date">{{ post.pubDate | date }}</div>
-        </li>
-        {% endfor %}
-      </ul>
-      {% else %}
-      <p class="no-posts">No posts available.</p>
-      {% endif %}
-      <a class="read-all" href="{{ sub.homeUrl }}" target="_blank" rel="noopener">Read all &rarr;</a>
-    </details>
+    <div class="pub-header">
+      <a class="pub-name" href="{{ sub.homeUrl }}" target="_blank" rel="noopener">{{ sub.name }}</a>
+      <span class="pub-badge badge-substack">Substack</span>
+    </div>
+    {% if sub.posts.length %}
+    <ul class="article-list">
+      {% for post in sub.posts.slice(0, 5) %}
+      <li>
+        <a href="{{ post.link }}" target="_blank" rel="noopener">{{ post.title }}</a>
+        <div class="article-date">{{ post.pubDate | date }}</div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="no-posts">No posts available.</p>
+    {% endif %}
+    <a class="read-all" href="{{ sub.homeUrl }}" target="_blank" rel="noopener">Read all &rarr;</a>
   </div>
   {% endfor %}
 
   {# ── Row 3: YouTube Shorts ── #}
   {% if writing.youtube.shorts.length %}
   <div class="pub-box span-4">
-    <details open>
-      <summary>
-        <div class="pub-header">
-          <span class="pub-name">Shorts</span>
-          <span class="pub-badge badge-video">YouTube</span>
-        </div>
-      </summary>
-      <div class="shorts-scroll">
-        {% for short in writing.youtube.shorts %}
-        <a class="short-card" href="{{ short.link }}" target="_blank" rel="noopener">
-          <img src="{{ short.thumbnail }}" alt="{{ short.title }}" loading="lazy">
-          <div class="short-title">{{ short.title }}</div>
-        </a>
-        {% endfor %}
-      </div>
-    </details>
+    <div class="pub-header">
+      <a class="pub-name" href="{{ writing.youtube.homeUrl }}" target="_blank" rel="noopener">Shorts</a>
+      <span class="pub-badge badge-video">YouTube</span>
+    </div>
+    <div class="shorts-scroll">
+      {% for short in writing.youtube.shorts %}
+      <a class="short-card" href="{{ short.link }}" target="_blank" rel="noopener">
+        <img src="{{ short.thumbnail }}" alt="{{ short.title }}" loading="lazy">
+        <div class="short-title">{{ short.title }}</div>
+      </a>
+      {% endfor %}
+    </div>
   </div>
   {% endif %}
 
   {# ── Row 4: Old Blog Archive ── #}
   <div class="pub-box span-4 archive-box">
-    <details open>
-      <summary>
-        <div class="pub-header">
-          <span class="pub-name">{{ writing.oldBlog.name }}</span>
-          <span class="pub-badge badge-archive">Archive</span>
-        </div>
-      </summary>
-      {% if writing.oldBlog.posts.length %}
-      <ul class="archive-list">
-        {% for post in writing.oldBlog.posts %}
-        <li>
-          <a href="{{ post.link }}" target="_blank" rel="noopener">{{ post.title }}</a>
-          <div class="article-date">{{ post.pubDate | date }}</div>
-        </li>
-        {% endfor %}
-      </ul>
-      {% else %}
-      <p class="no-posts">No archive posts available.</p>
-      {% endif %}
-      <a class="read-all" href="{{ writing.oldBlog.homeUrl }}" target="_blank" rel="noopener">Visit archive &rarr;</a>
-    </details>
+    <div class="pub-header">
+      <a class="pub-name" href="{{ writing.oldBlog.homeUrl }}" target="_blank" rel="noopener">{{ writing.oldBlog.name }}</a>
+      <span class="pub-badge badge-archive">Archive</span>
+    </div>
+    {% if writing.oldBlog.posts.length %}
+    <ul class="archive-list">
+      {% for post in writing.oldBlog.posts %}
+      <li>
+        <a href="{{ post.link }}" target="_blank" rel="noopener">{{ post.title }}</a>
+        <div class="article-date">{{ post.pubDate | date }}</div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="no-posts">No archive posts available.</p>
+    {% endif %}
+    <a class="read-all" href="{{ writing.oldBlog.homeUrl }}" target="_blank" rel="noopener">Visit archive &rarr;</a>
   </div>
 
 </div>

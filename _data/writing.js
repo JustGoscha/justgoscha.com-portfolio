@@ -29,7 +29,7 @@ var FEEDS = {
   oldBlog: {
     name: "justGoscha's Realm",
     url: "https://feeds.feedburner.com/justgoscha",
-    homeUrl: "https://justgoscha.blogspot.com",
+    homeUrl: "http://justgoscha.github.io",
     type: "blog",
   },
   youtube: {

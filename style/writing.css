@@ -3,7 +3,7 @@
 /* Masthead */
 .masthead {
   text-align: center;
-  padding: 0 var(--spacing) var(--spacing-2x);
+  padding: 0 var(--spacing) calc(var(--spacing-2x) * 1.5);
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -85,11 +85,26 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   padding: 0.2em 0.6em;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 2px;
   color: var(--hint-text-light);
   white-space: nowrap;
   font-weight: 500;
+}
+
+.pub-badge.badge-substack {
+  border-color: rgba(255, 136, 0, 0.4);
+  color: rgba(255, 170, 60, 0.8);
+}
+
+.pub-badge.badge-video {
+  border-color: rgba(255, 0, 0, 0.3);
+  color: rgba(255, 80, 80, 0.8);
+}
+
+.pub-badge.badge-archive {
+  border-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 /* ── Article List ── */
@@ -112,6 +127,13 @@
   line-height: 1.4;
   font-weight: 500;
   display: block;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.article-list a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 /* Featured first article in primary boxes */

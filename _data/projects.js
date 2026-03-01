@@ -131,6 +131,14 @@ const work = [
       {
         "emoji": "✅",
         "text": "Ensuring flawless operation with nearly 100% end-to-end test coverage"
+      },
+      {
+        "emoji": "🛠️",
+        "text": "Built admin interfaces to manage writers, publications, and content"
+      },
+      {
+        "emoji": "✍️",
+        "text": "Involved in multiple critical features like a custom-built WYSIWYG editor, landing page redesign, profile page, and more"
       }
     ]
   },

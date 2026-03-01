@@ -12,19 +12,19 @@ css: /style/writing.css
 
 <div class="editorial-grid">
 
-  {# ── Row 1: Primary Substacks (2 cols each) ── #}
-  {% for sub in writing.substacks.slice(0, 2) %}
+  {# ── Row 1: Inspired Animator (2 cols) + YouTube Videos (2 cols) ── #}
+  {% set primarySub = writing.substacks[0] %}
   <div class="pub-box span-2">
     <details open>
       <summary>
         <div class="pub-header">
-          <span class="pub-name">{{ sub.name }}</span>
+          <span class="pub-name">{{ primarySub.name }}</span>
           <span class="pub-badge badge-substack">Substack</span>
         </div>
       </summary>
-      {% if sub.posts.length %}
+      {% if primarySub.posts.length %}
       <ul class="article-list">
-        {% for post in sub.posts.slice(0, 6) %}
+        {% for post in primarySub.posts.slice(0, 6) %}
         <li{% if loop.first %} class="featured"{% endif %}>
           <a href="{{ post.link }}" target="_blank" rel="noopener">{{ post.title }}</a>
           {% if loop.first and post.description %}
@@ -37,37 +37,9 @@ css: /style/writing.css
       {% else %}
       <p class="no-posts">No posts available.</p>
       {% endif %}
-      <a class="read-all" href="{{ sub.homeUrl }}" target="_blank" rel="noopener">Read all &rarr;</a>
+      <a class="read-all" href="{{ primarySub.homeUrl }}" target="_blank" rel="noopener">Read all &rarr;</a>
     </details>
   </div>
-  {% endfor %}
-
-  {# ── Row 2: Smaller Substacks (1 col each) + YouTube Videos (2 cols) ── #}
-  {% for sub in writing.substacks.slice(2, 4) %}
-  <div class="pub-box">
-    <details open>
-      <summary>
-        <div class="pub-header">
-          <span class="pub-name">{{ sub.name }}</span>
-          <span class="pub-badge badge-substack">Substack</span>
-        </div>
-      </summary>
-      {% if sub.posts.length %}
-      <ul class="article-list">
-        {% for post in sub.posts.slice(0, 5) %}
-        <li>
-          <a href="{{ post.link }}" target="_blank" rel="noopener">{{ post.title }}</a>
-          <div class="article-date">{{ post.pubDate | date }}</div>
-        </li>
-        {% endfor %}
-      </ul>
-      {% else %}
-      <p class="no-posts">No posts available.</p>
-      {% endif %}
-      <a class="read-all" href="{{ sub.homeUrl }}" target="_blank" rel="noopener">Read all &rarr;</a>
-    </details>
-  </div>
-  {% endfor %}
 
   <div class="pub-box span-2">
     <details open>
@@ -95,6 +67,61 @@ css: /style/writing.css
       <a class="read-all" href="{{ writing.youtube.homeUrl }}" target="_blank" rel="noopener">Watch all &rarr;</a>
     </details>
   </div>
+
+  {# ── Row 2: Pain Meds (2 cols) + ZenMemo (1 col) + Technograf (1 col) ── #}
+  {% set secondSub = writing.substacks[1] %}
+  <div class="pub-box span-2">
+    <details open>
+      <summary>
+        <div class="pub-header">
+          <span class="pub-name">{{ secondSub.name }}</span>
+          <span class="pub-badge badge-substack">Substack</span>
+        </div>
+      </summary>
+      {% if secondSub.posts.length %}
+      <ul class="article-list">
+        {% for post in secondSub.posts.slice(0, 6) %}
+        <li{% if loop.first %} class="featured"{% endif %}>
+          <a href="{{ post.link }}" target="_blank" rel="noopener">{{ post.title }}</a>
+          {% if loop.first and post.description %}
+          <div class="excerpt">{{ post.description }}</div>
+          {% endif %}
+          <div class="article-date">{{ post.pubDate | date }}</div>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p class="no-posts">No posts available.</p>
+      {% endif %}
+      <a class="read-all" href="{{ secondSub.homeUrl }}" target="_blank" rel="noopener">Read all &rarr;</a>
+    </details>
+  </div>
+
+  {% for sub in writing.substacks.slice(2, 4) %}
+  <div class="pub-box">
+    <details open>
+      <summary>
+        <div class="pub-header">
+          <span class="pub-name">{{ sub.name }}</span>
+          <span class="pub-badge badge-substack">Substack</span>
+        </div>
+      </summary>
+      {% if sub.posts.length %}
+      <ul class="article-list">
+        {% for post in sub.posts.slice(0, 5) %}
+        <li>
+          <a href="{{ post.link }}" target="_blank" rel="noopener">{{ post.title }}</a>
+          <div class="article-date">{{ post.pubDate | date }}</div>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p class="no-posts">No posts available.</p>
+      {% endif %}
+      <a class="read-all" href="{{ sub.homeUrl }}" target="_blank" rel="noopener">Read all &rarr;</a>
+    </details>
+  </div>
+  {% endfor %}
 
   {# ── Row 3: YouTube Shorts ── #}
   {% if writing.youtube.shorts.length %}

@@ -72,7 +72,7 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-a.pub-name {
+.pub-name {
   font-size: 0.65em;
   font-weight: 700;
   text-transform: uppercase;
@@ -111,6 +111,11 @@ a.pub-name:hover {
 .pub-badge.badge-archive {
   border-color: rgba(255, 255, 255, 0.15);
   color: rgba(255, 255, 255, 0.4);
+}
+
+.pub-badge.badge-social {
+  border-color: rgba(100, 255, 160, 0.35);
+  color: rgba(100, 255, 160, 0.75);
 }
 
 /* ── Article List ── */
@@ -288,6 +293,47 @@ a.pub-name:hover {
   -webkit-box-orient: vertical;
   overflow: hidden;
   color: var(--secondary-text-light);
+}
+
+/* ── Social Links ── */
+.social-box {
+  text-align: center;
+}
+
+.social-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45em;
+  text-decoration: none;
+  color: var(--hint-text-light);
+  transition: color 0.25s;
+  padding: 0.8em 1.2em;
+  min-width: 70px;
+}
+
+.social-link:hover {
+  color: var(--secondary-200);
+}
+
+.social-link svg {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.social-link span {
+  font-size: 0.52em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 /* ── Old Blog Archive ── */

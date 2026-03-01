@@ -127,7 +127,7 @@ const work = [
   },
   {
     "company": "Oximity GmbH",
-    "companyLink": "https://web.archive.org/web/2016/https://www.oximity.com/",
+    "companyLink": "https://web.archive.org/web/20160116020331/https://www.oximity.com/",
     "position": "Front-End Engineer",
     "from": "2014-05-01",
     "to": "2016-03-31",
@@ -408,7 +408,7 @@ const sideProjects = [
     "date": "2026",
     "static_image": "/img/work/projects/finlogos.jpg",
     "url": "https://finlogos.justgoscha.com/",
-    "description": "Advanced financial intelligence tools have long been locked behind institutional walls — available to hedge funds, but not to everyday investors. FinLogos democratizes this by bringing AI-powered research, hypothesis tracking, and portfolio analysis to individual investors. Research smarter, validate your predictions with data, and discover hidden opportunities.\n\n[visit project](https://finlogos.justgoscha.com/)",
+    "description": "Advanced financial intelligence tools have long been locked behind institutional walls, available to hedge funds, but not to everyday investors. FinLogos democratizes this by bringing AI-powered research, hypothesis tracking, and portfolio analysis to individual investors. Research smarter, validate your predictions with data, and discover hidden opportunities.\n\n[visit project](https://finlogos.justgoscha.com/)",
     "tags": ["ai", "saas"]
   },
   {
@@ -416,7 +416,7 @@ const sideProjects = [
     "date": "2023 - present",
     "static_image": "/img/work/projects/omgbrush.jpg",
     "url": "https://animator.substack.com/p/bringing-3d-drawing-to-the-ipad",
-    "description": "Professional 3D tools on iPad exist, but they lack the simplicity and immediacy that makes drawing on iPad so appealing. OMGBrush brings 3D drawing to the iPad with a handmade aesthetic — fun, explorative, and expressive like a traditional art tool. Simple to pick up, yet powerful. Inspired by Blender's GreasePencil and QuillVR.\n\n[read article](https://animator.substack.com/p/bringing-3d-drawing-to-the-ipad)",
+    "description": "Professional 3D tools on iPad exist, but they lack the simplicity and immediacy that makes drawing on iPad so appealing. OMGBrush brings 3D drawing to the iPad with a handmade aesthetic, fun, explorative, and expressive like a traditional art tool. Simple to pick up, yet powerful. Inspired by Blender's GreasePencil and QuillVR.\n\n[read article](https://animator.substack.com/p/bringing-3d-drawing-to-the-ipad)",
     "tags": ["creative", "d3"]
   },
   {
@@ -424,7 +424,7 @@ const sideProjects = [
     "date": "2025",
     "static_image": "/img/work/projects/zentest.jpg",
     "url": "https://github.com/JustGoscha/zentest",
-    "description": "E2E tests are always flaky. They break, get ignored, and nobody wants to maintain them. ZenTest solves this by completely decoupling end-to-end testing from your app. Tests are written in plain English, so even non-technical people can create them. An agentic AI tester drives the browser like a human — clicking buttons, typing, reacting to what it sees. Tests are self-healing, so they don't break when your UI changes.\n\n[view on GitHub](https://github.com/JustGoscha/zentest)",
+    "description": "E2E tests are always flaky. They break, get ignored, and nobody wants to maintain them. ZenTest solves this by completely decoupling end-to-end testing from your app. Tests are written in plain English, so even non-technical people can create them. An agentic AI tester drives the browser like a human, clicking buttons, typing, reacting to what it sees. Tests are self-healing, so they don't break when your UI changes.\n\n[view on GitHub](https://github.com/JustGoscha/zentest)",
     "tags": ["ai", "dev-tools", "open-source"]
   },
   {
@@ -432,7 +432,7 @@ const sideProjects = [
     "date": "2025",
     "static_image": "/img/work/projects/meepleos.jpg",
     "url": "https://justgoscha.github.io/meepleOS/",
-    "description": "Performance reviews are often unstructured and not that helpful. MeepleOS addresses this by evaluating people across multiple dimensions — because nobody is just awesome or terrible. People excel in certain areas and struggle in others. MeepleOS tells them where they shine and where they can improve, gamifying the process to make it more engaging and actionable.\n\n[visit project](https://justgoscha.github.io/meepleOS/)",
+    "description": "Performance reviews are often unstructured and not that helpful. MeepleOS addresses this by evaluating people across multiple dimensions, because nobody is just awesome or terrible. People excel in certain areas and struggle in others. MeepleOS tells them where they shine and where they can improve, gamifying the process to make it more engaging and actionable.\n\n[visit project](https://justgoscha.github.io/meepleOS/)",
     "tags": ["ai", "saas"]
   }
 ];

@@ -46,7 +46,7 @@ p {
 
 .cv {
     color: var(--primary-text);
-    background-color: var(--grey-200);
+    background-color: #f5f5f8;
     padding-bottom: 3em;
 }
 
